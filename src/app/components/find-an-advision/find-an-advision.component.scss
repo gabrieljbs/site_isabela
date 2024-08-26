@@ -1,0 +1,63 @@
+// Find on advision
+.find-an-advisor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #00342b !important;
+  width: 100vw;
+  margin-top: 10rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  gap: 10rem;
+  .text-advisor {
+    width: 24vw;
+    h1 {
+      color: #fff;
+    }
+    p {
+      padding-top: 1rem;
+      color: #fff;
+    }
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    button {
+      margin: 0;
+      align-self: flex-end;
+    }
+    h3 {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    mat-form-field {
+      width: 30vw;
+      color: #000;
+      background: #00342b;
+      mat-select {
+        color: #c9c9c9;
+        font-weight: 500;   
+      }
+    }
+  }
+}
+// Botão all expertise
+.animated-button-2 {
+  background-color: #00342b;
+  color: #00884d;
+  border: none;
+  border-left: solid 5px #00884d;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-position 0.5s, color 0.5s;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, #00342b 50%, #00884d 50%);
+  height: 55px;
+}
+.animated-button-2:hover {
+  background-position: -100% 0;
+  color: #fff;
+}

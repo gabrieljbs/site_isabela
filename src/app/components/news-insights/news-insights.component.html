@@ -1,0 +1,90 @@
+<div id="Spotlight-on" class="Spotlight-on">
+    <div text>
+        <p>Spotlight on</p>
+        <h1>
+            Global
+            <br>
+            intelligence
+        </h1>
+    </div>
+    <mat-tab-group animationDuration="2000ms" mat-stretch-tabs="false" mat-align-tabs="center">
+        <mat-tab label="INSIGHTS">
+            <div class="content">
+                <div class="slide1">
+                    <div class="picsum-img-wrapper">
+                        <img [src]={image} alt="Random slide" />
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+
+                <div class="slide2">
+                    <div class="right">
+                        <ngb-carousel [showNavigationArrows]="true" [showNavigationIndicators]="true"
+                            (slide)="onSlideChange($event)" >
+                            @for (image of slides; track image) {
+                            <ng-template ngbSlide>
+                                <div class="picsum-img-wrapper">
+                                    <img [src]=image.src alt="Random slide" />
+                                    <div class="overlay"></div>
+                                </div>
+                            </ng-template>
+                            }
+                        </ngb-carousel>
+                        <h2>{{ currentTitle }}</h2>
+                    </div>
+                    <div id="text-area" class="text-area">
+                        <p>INSIGHTS</p>
+                        <h1>The EU Corporate Sustainability Due
+                            Diligence Directive is final:
+                            how can companies prepare?
+                        </h1>
+                        <span> Jun 24, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+        </mat-tab>
+        <mat-tab label="NEWS">
+            <div class="content">
+                <div class="slide1">
+                    <ngb-carousel animationDuration="2000ms" [showNavigationArrows]="false"
+                        [showNavigationIndicators]="false">
+                        @for (image of slides; track image) {
+                        <ng-template ngbSlide>
+                            <div class="picsum-img-wrapper">
+                                <img [src]=image.src alt="Random slide" />
+                                <div class="overlay"></div>
+                            </div>
+                        </ng-template>
+                        }
+                    </ngb-carousel>
+                </div>
+
+                <div class="slide2">
+                    <div class="right">
+                        <ngb-carousel [showNavigationArrows]="true" [showNavigationIndicators]="true">
+                            @for (image of slides; track image) {
+                            <ng-template ngbSlide>
+                                <div class="picsum-img-wrapper">
+                                    <img [src]=image.src alt="Random slide" />
+                                    <div class="overlay"></div>
+                                </div>
+                            </ng-template>
+                            }
+                        </ngb-carousel>
+                        <h2>Antitrust focus on private equity funds and serial acquisitions</h2>
+                    </div>
+                    <div id="text-area" class="text-area">
+                        <p>INSIGHTS</p>
+                        <h1>The EU Corporate Sustainability Due
+                            Diligence Directive is final:
+                            how can companies prepare?
+                        </h1>
+                        <span> Jun 24, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+        </mat-tab>
+    </mat-tab-group>
+</div>

@@ -1,0 +1,82 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00342b;
+  width: 100vw;
+  height: 20vh;
+
+  .form-field {
+    width: 80vw;
+    input {
+      font-size: 42px;
+      font-weight: 500;
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+    }
+  }
+}
+.select {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  mat-form-field {
+    width: 20vw;
+    padding: 20px;
+  }
+}
+
+.people {
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
+  margin-left: 10rem;
+  margin-right: 10rem;
+
+  h1 {
+    align-self: start;  
+    font-size: 55px;
+    color: #00342b;
+    font-weight: 500;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+
+  h2 {
+    margin-top: 2rem;
+    color: #00342b;
+    font-size: 27px;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0fbb73;
+    text-transform: uppercase;
+  }
+  p {
+    color: #00342b;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.profile-card {
+  text-align: start;
+  padding: 10px;
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4; /* Define a proporção 3:4 */
+  object-fit: cover; /* Garante que a imagem cubra o espaço disponível */
+  border-bottom: 1px solid #ddd;
+}

@@ -1,0 +1,27 @@
+.select {
+  margin-left: 10rem;
+  h1 {
+    font-size: 80px;
+    font-weight: 500;
+    color: #00342b;
+  }
+  mat-form-field {
+    width: 30vw;
+    height: 10vh;
+    mat-select {
+      font-size: 30px;
+      color: #00884d;
+      font-weight: 500;
+    }
+  }
+}
+
+.search{
+    margin-left: 10rem;
+ 
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}

@@ -1,0 +1,83 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  ul {
+    padding: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+  button {
+    background: none;
+    border: none;
+  }
+  li {
+    .btn-1:hover p {
+      font-style: italic;
+      color: #009b54;
+    }
+  }
+  .fist-colunm {
+    margin-right: 7rem;
+    h5 {
+      font-size: 18px;
+      line-height: 25px;
+      color: rgb(173, 204, 199);
+      width: 20vw;
+    }
+
+    p:hover {
+      font-style: normal;
+      color: #009b54;
+    }
+  }
+
+  .second-colunm {
+
+    text-align: left;
+    h5 {
+      font-size: 14px;
+      font-weight: 700;
+      color: rgb(173, 204, 199);
+    }
+    li {
+      P {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  button:hover span {
+    color: #009b54;
+  }
+  p {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+  }
+  span {
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+  }
+}
+.line {
+  width: 3px;
+  height: 40vh;
+  background-color: #009b54;
+  position: relative;
+  margin-right: 3rem;
+}
+
+.btn {
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+  }
+  p:hover {
+    color: #009b54;
+    font-style: normal;
+  }
+}

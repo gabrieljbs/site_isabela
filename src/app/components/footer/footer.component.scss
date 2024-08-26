@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly   ;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    height: 50vh;
+    a:link, a:visited {
+        color: #00342b;
+        text-align: center;
+        text-decoration: none;
+      }
+      
+      a:hover, a:active {
+        color: #00884d;
+      }
+    ul{
+        padding-top: 1rem;
+    }
+    h5{
+        color: #00342b;
+        margin-bottom: 2rem;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 500;
+        color: #00342b;
+        padding: 0.25rem 0;
+    }
+
+    P:hover{
+        color: #00884d;
+    }
+    .social{
+        border: none;
+        border-left: #00884d solid 3px;
+
+    }
+}

@@ -1,0 +1,165 @@
+<div class="content">
+    @if (dataInput == 'capabilite') {
+    <ul class="fist-colunm">
+        @for (item of data; track $index) {
+        <li>
+            <button (click)="openGlobal(item.name)" class="btn-1">
+                <p>{{item.name}}</p>
+            </button>
+        </li>
+        }
+    </ul>
+    <div class="line"></div>
+    <ul>
+        @for (item of itemData[0]; track $index) {
+        <li>
+            <button (click)="navigate(item.path)">
+                <span>{{item.name}}</span>
+            </button>
+        </li>
+        }
+    </ul>
+    }
+    <!-- ------------------------------------------------------------------- -->
+
+    @if (dataInput == 'insights') {
+    <ul class="fist-colunm">
+        <li>
+            <h5>
+                Explore the views
+                of the world's leading
+                lawyers on the issues that
+                matter for global business.
+            </h5>
+        </li>
+        <li>
+            <button class="btn">
+                <p>ALL INSAGTH</p>
+            </button>
+        </li>
+    </ul>
+    <div class="line"></div>
+    <ul class="second-colunm">
+        <h5>FEATURED INSIGHTS</h5>
+        <li>
+            <button>
+                <p>Featured insights</p>
+            </button>
+
+        </li>
+        <li>
+            <button>
+                <p> M&A insights for 2024</p>
+            </button>
+
+        </li>
+        <li>
+            <button>
+                <p>Global business in a changing Europe</p>
+            </button>
+
+        </li>
+        <li>
+            <button>
+                <p>Ten lessons in sustainability regulation</p>
+            </button>
+
+        </li>
+
+        <li>
+            <button>
+                <p>Global trends in merger control enforcement</p>
+            </button>
+
+        </li>
+        <li>
+            <button>
+                <p>Managing future disputes risks</p>
+            </button>
+        </li>
+    </ul>
+    <ul class="second-colunm">
+        <h5>BLOGS</h5>
+        <li>
+            <button>
+                <p>All blogs</p>
+            </button>
+
+        </li>
+    </ul>
+    }
+    <!-- ------------------------------------------------------------------- -->
+    @if (dataInput == 'about-us') {
+    <ul class="fist-colunm">
+        <li>
+            <h5>
+                A&O Shearman was formed
+                in 2024 via the merger of
+                two historic firms, Allen &
+                Overy and Shearman & Sterling.
+            </h5>
+        </li>
+        <li>
+            <button class="btn">
+                <p>WHO WE ARE</p>
+            </button>
+        </li>
+    </ul>
+    <div class="line"></div>
+    <ul class="second-colunm">
+        <h5>OUR FIRM</h5>
+        <li>
+            <button>
+                <p>About us</p>
+            </button>
+
+        </li>
+        <li>
+            <button>
+                <p> Alumni network</p>
+            </button>
+
+        </li>
+        <li>
+            <button>
+                <p>Leadership</p>
+            </button>
+        </li>
+        <li>
+            <button>
+                <p>
+                    Legal innovation</p>
+            </button>
+        </li>
+
+    </ul>
+    <ul class="second-colunm">
+        <h5>RESPONSIBLE BUSINESS</h5>
+        <li>
+            <button>
+                <p>Diversity, equity and inclusion</p>
+            </button>
+        </li>
+        <li>
+            <button>
+                <p>Pro bono</p>
+            </button>
+        </li>
+        <li>
+            <button>
+                <p>Social impact</p>
+            </button>
+        </li>
+        <li>
+            <button>
+                <p>Sustainability</p>
+            </button>
+        </li>
+        <li>
+            <button>
+                <p>Wellbeing</p>
+            </button>
+        </li>
+    </ul>
+    }
+</div>

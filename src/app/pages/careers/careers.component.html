@@ -1,0 +1,17 @@
+<div id="select" class="select">
+    <h1>Carrers</h1>
+    <mat-form-field>
+        <mat-select [(value)]="selected">
+            @for (food of foods; track food) {
+            <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+            }
+        </mat-select>
+    </mat-form-field>
+</div>
+
+<div id="search" class="search">
+    <img src="assets/image-18.webp" alt="">
+    <button>
+        Search roles and apply
+    </button>
+</div>
