@@ -5,6 +5,11 @@
     gap: 2rem;
     padding-bottom: 2rem;
     height: 50vh;
+    button {
+        background: none;
+        border: none;
+      }
+    
     a:link, a:visited {
         color: #00342b;
         text-align: center;
@@ -16,7 +21,9 @@
       }
     ul{
         padding-top: 1rem;
+        list-style-type: none;
     }
+ 
     h5{
         color: #00342b;
         margin-bottom: 2rem;
