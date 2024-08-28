@@ -12,6 +12,7 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 import { FindAnAdvisionComponent } from '../../components/find-an-advision/find-an-advision.component';
 import { NewsInsightsComponent } from '../../components/news-insights/news-insights.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -46,6 +47,13 @@ export class HomeComponent implements AfterViewInit {
     { src: 'assets/image-9.webp', height: '250px' },
     { src: 'assets/image-10.webp', height: '500px' },
   ];
+constructor(private route: Router){
+
+}
+
+naviagete(path:string){
+  this.route.navigate(['/',path])
+}
 
   ngAfterViewInit(): void {
     const curtain = document.getElementById('curtain') as HTMLElement;

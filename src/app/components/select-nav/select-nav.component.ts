@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { MockDataServiceService } from '../../services/MockDataService/mock-data-service.service';
 import { Router } from '@angular/router';
+import { GlobalCoverageServiceService } from '../../services/GlobalCoverageService/global-coverage-service.service';
+import { IndustriesServiceService } from '../../services/IndustriesService/industries-service.service';
+import { ExpertiseServiceService } from '../../services/ExpertiseService/expertise-service.service';
 
 @Component({
   selector: 'app-select-nav',
@@ -24,16 +26,20 @@ export class SelectNavComponent {
   page: string = '';
 
   constructor(
-    private dataService: MockDataServiceService,
+    private globalCoverageService: GlobalCoverageServiceService,
+    private industriesService: IndustriesServiceService,
+    private expertiseService: ExpertiseServiceService,
     private router: Router
   ) {
-    this.globalCoverage = this.dataService.getDataGlobalCoverage();
-    this.industries = this.dataService.getDataIndustrie();
-    this.expertise = this.dataService.getDataExpertise();
+    this.globalCoverage = this.globalCoverageService.getData();
+    this.industries = this.industriesService.getData();
+    this.expertise = this.expertiseService.getData();
 
     this.data.push(this.expertise);
     this.data.push(this.industries);
     this.data.push(this.globalCoverage);
+
+  
   }
 
   ngOnInit() {}

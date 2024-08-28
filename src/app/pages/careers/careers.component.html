@@ -13,5 +13,72 @@
     <img src="assets/image-18.webp" alt="">
     <button>
         Search roles and apply
+        <i class="bi bi-arrow-right arrow-icon"></i>
     </button>
+</div>
+
+<div id="discover" class="discover">
+    <div class="text">
+        <h1>Discover what it means to belong and excel at A&O Shearman</h1>
+        <p>
+            We're at the start of an exciting journey as a new industry-leading global law firm, and this offers great
+            opportunities for our people. Whether you're helping clients solve complex challenges, transforming the ways
+            we manage our business, or ensuring the smooth-running of our operations, this is an environment where you
+            can belong and excel - whether you’re starting out, or taking the next step in your career.
+        </p>
+
+        <p> Together, we achieve unparalleled outcomes for our clients and for each other.</p>
+    </div>
+
+    <img src="assets/image-19.webp" alt="">
+</div>
+
+
+<div id="facts" class="facts">
+    <h1>
+        Key facts <br>and figures
+    </h1>
+
+    <div class="grid">
+
+        @for (item of [].constructor(6); track $index) {
+        <div class="cards">
+            <div class="line"></div>
+            <h2>Third largest integrated law firm</h2>
+            <p>
+                Nearly 4,000 lawyers combined,
+                including 800 partners,
+                across 47 offices and 29 countries globally.
+            </p>
+        </div>
+        }
+    </div>
+</div>
+
+
+<div id="working" class="working">
+    <h1>Working at A&O Shearman</h1>
+    <div class="tabs">
+
+        <div class="tab-headers">
+            @for (item of data; track $index) {
+            <div class="tab-header" [class.active]="selectedTab === $index" (click)="selectTab($index)">
+                {{item.title}}
+            </div>
+            }
+        </div>
+
+        <div class="tab-content">
+            @for (item of data; track $index) {
+            @if (selectedTab === $index) {
+            <div class="tab-panel">
+                <h3>{{item.title}}</h3>
+                <p>{{description}}</p>
+                <img [src]="item.url" alt="">
+            </div>
+            }
+            }
+
+        </div>
+    </div>
 </div>

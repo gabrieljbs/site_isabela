@@ -2,36 +2,52 @@
     <div id='container' class="container">
         <ul>
             <h5>SERVICES</h5>
-
-            <p><a href="">Advisory and regulatory</a></p>
-            <p><a href="">Capital markets</a></p>
-            <p><a href="">Corporate and M&A</a></p>
-            <p><a href="">Disputes</a></p>
-            <p><a href="">Finance</a></p>
-            <p><a href="">Legal innovation</a></p>
+            @for (item of expertise.expertise; track $index) {
+            <li>
+                <button (click)="navigate(item.path,'industrie')">
+                    <p>{{item.name}}</p>
+                </button>
+            </li>
+            }
         </ul>
-
         <ul>
             <h5>GLOBAL COVERAGE</h5>
 
-            <p><a href="">North America</a></p>
-            <p><a href="">Latin America and the Caribbean</a></p>
-            <p><a href="">Europe</a></p>
-            <p><a href="">Middle East</a></p>
-            <p><a href="">Africa</a></p>
-            <p><a href="">Asia Pacific</a></p>
-            <p><a href="">Rest of the world</a></p>
-
+            @for (item of globalCoverage.continents; track $index) {
+            <li>
+                <button (click)="navigate(item.path,'Global Coverage')">
+                    <p>{{item.name}}</p>
+                </button>
+            </li>
+            }
         </ul>
         <ul>
             <h5>FIRM</h5>
-
-            <p><a href="">About us</a></p>
-            <p><a href="">Careers</a></p>
-            <p><a href="">Contact us</a></p>
-            <p><a href="">Knowledge resources</a></p>
-            <p><a href="">People</a></p>
-
+            <li>
+                <button (click)="navigate('careers','')">
+                    <p>About us</p>
+                </button>
+            </li>
+            <li>
+                <button (click)="navigate('careers','')">
+                    <p>Careers</p>
+                </button>
+            </li>
+            <li>
+                <button (click)="navigate('careers','')">
+                    <p>Contact us</p>
+                </button>
+            </li>
+            <li>
+                <button (click)="navigate('careers','')">
+                    <p>Knowledge resources</p>
+                </button>
+            </li>
+            <li>
+                <button (click)="navigate('careers','')">
+                    <p>People</p>
+                </button>
+            </li>
         </ul>
 
         <div id="social" class="social">
