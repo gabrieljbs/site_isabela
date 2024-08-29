@@ -141,65 +141,6 @@ p {
 
 /////////////////////////////////////////////////////////////////////
 // Explore
-.explore {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 5rem;
-  width: 70vw;
-  height: 90vh;
-  gap: 10rem;
-  margin: auto;
-  margin-top: 10rem;
-  .text-explore {
-    background-color: #00342b;
-    color: #fff;
-    padding: 4rem 4rem 7.5rem;
-    width: 55vw;
-    height: 100%;
-    h3 {
-      font-weight: 700;
-      font-size: 14px;
-    }
-    p {
-      color: #fff;
-      font-size: 18px;
-      font-weight: 500;
-    }
-    h1 {
-      color: #fff;
-      line-height: 4rem;
-      font-weight: 400;
-    }
-  }
-  .scroll {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    width: 100%;
-    overflow: scroll;
-    scrollbar-width: none;
-    padding: 1rem;
-    .itens {
-      color: #00342b;
-      width: 40vw;
-      padding: 1rem;
-      h2 {
-        font-size: 34px;
-        font-weight: 500;
-        color: #00342b;
-      }
-      h2:hover {
-        font-style: italic;
-        color: #00884d;
-      }
-      p {
-        font-size: 18px;
-        color: #00342b;
-      }
-    }
-  }
-}
 
 // globla coverage //////////////////////////////
 .global-coverage {
@@ -295,26 +236,6 @@ p {
   background-position: -100% 0;
   color: #fff;
 }
-// Botão all expertise
-.animated-button-2 {
-  background-color: #00342b;
-  color: #00884d;
-  border: none;
-  border-left: solid 5px #00884d;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-position 0.5s, color 0.5s;
-  background-size: 200% 100%;
-  background-image: linear-gradient(to right, #00342b 50%, #00884d 50%);
-  height: 55px;
-}
-.animated-button-2:hover {
-  background-position: -100% 0;
-  color: #fff;
-}
-
 //Efeito de cortina
 #curtain-container {
   position: relative;
