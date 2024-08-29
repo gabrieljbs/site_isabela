@@ -11,41 +11,60 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './news-insights.component.scss',
 })
 export class NewsInsightsComponent {
-  image: string = 'assets/image-11.webp';
-  index: any = 1;
-  slides: any = [
+  slides: any[] = [
     {
       src: 'assets/image-11.webp',
-      title: 'Slide 1 Title',
-      subTitle: 'INSIGHTS',
-      discription:
-        'The EU Corporate Sustainability Due Diligence Directive is final: how can companies prepare?',
+      title: 'Zooming in on AI: When will the AI Act apply?',
+      category: 'Opinion',
+      description: 'Description for 1',
     },
     {
       src: 'assets/image-12.webp',
-      title: 'Slide 2 Title',
-      subTitle: 'OPINION',
-      discription:
-        'The EU Corporate Sustainability Due Diligence Directive is final: how can companies prepare?',
+      title: 'Zooming in on AI: When will the AI Act apply?',
+      category: 'article',
+      description: 'Description for 2',
     },
     {
       src: 'assets/image-13.webp',
-      title: 'Slide 3 Title',
-      subTitle: 'INSIGHTS ',
-      discription:
-        'The EU Corporate Sustainability Due Diligence Directive is final: how can companies prepare?',
+      title: 'Zooming in on AI: When will the AI Act apply?',
+      category: 'insights',
+      description: 'Description for 3',
     },
   ];
-  constructor() {
-    this.image = this.slides[this.index].src;
-  }
-  currentSlideIndex = 0;
 
-  onSlideChange(event: any) {
-    console.log(event.current
-)
+  constructor() {}
+
+  previousSlideIndex: number = this.slides.length - 1;
+  previousIndex: number = this.slides.length - 1;
+  overlay: boolean = true;
+  currentIndex: number = 0;
+  intervalId: any;
+  ngOnInit() {
+    this.startSlideShow();
   }
-  get currentTitle() {
-    return this.slides[this.currentSlideIndex]?.title;
+
+  ngOnDestroy() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+  }
+
+  startSlideShow() {
+    this.intervalId = setInterval(() => {
+      this.nextSlide();
+    }, 3000);
+  }
+
+  prevSlide() {
+    this.previousSlideIndex = this.currentIndex; // Atualiza o índice da imagem anterior
+    this.currentIndex =
+      (this.currentIndex + this.slides.length - 1) % this.slides.length;
+    this.previousIndex =
+      (this.previousIndex + this.slides.length - 1) % this.slides.length;
+  }
+
+  nextSlide() {
+    this.previousIndex = this.currentIndex;
+    this.currentIndex = (this.currentIndex + 1) % this.slides.length;
   }
 }

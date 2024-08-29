@@ -10,81 +10,61 @@
     <mat-tab-group animationDuration="2000ms" mat-stretch-tabs="false" mat-align-tabs="center">
         <mat-tab label="INSIGHTS">
             <div class="content">
-                <div class="slide1">
-                    <div class="picsum-img-wrapper">
-                        <img [src]={image} alt="Random slide" />
-                        <div class="overlay"></div>
-                    </div>
+                <div class="prev-slide">
+                    <img [src]="slides[previousSlideIndex].src" alt="Previous Slide">
                 </div>
 
-                <div class="slide2">
-                    <div class="right">
-                        <ngb-carousel [showNavigationArrows]="true" [showNavigationIndicators]="true"
-                            (slide)="onSlideChange($event)" >
-                            @for (image of slides; track image) {
-                            <ng-template ngbSlide>
-                                <div class="picsum-img-wrapper">
-                                    <img [src]=image.src alt="Random slide" />
-                                    <div class="overlay"></div>
-                                </div>
-                            </ng-template>
-                            }
-                        </ngb-carousel>
-                        <h2>{{ currentTitle }}</h2>
+                <div class="news">
+                    <div class="slide-show">
+                        <div class="slide" style="position: relative;">
+                            <img [src]="slides[currentIndex].src" alt="Current Slide" class="current-slide">
+                            <button class="prev" (click)="prevSlide()">&#10094;</button>
+                            <button class="next" (click)="nextSlide()">&#10095;</button>
+                        </div>
+                        <h2>
+                            {{ slides[currentIndex].title }}
+                        </h2>
                     </div>
-                    <div id="text-area" class="text-area">
-                        <p>INSIGHTS</p>
-                        <h1>The EU Corporate Sustainability Due
-                            Diligence Directive is final:
-                            how can companies prepare?
+                    <div class="text">
+                        <p>
+                            {{ slides[currentIndex].category }}
+                        </p>
+                        <h1>
+                            {{ slides[currentIndex].description }}
                         </h1>
-                        <span> Jun 24, 2024</span>
+                        <span>Aug 1, 2024</span>
                     </div>
                 </div>
             </div>
-
         </mat-tab>
         <mat-tab label="NEWS">
             <div class="content">
-                <div class="slide1">
-                    <ngb-carousel animationDuration="2000ms" [showNavigationArrows]="false"
-                        [showNavigationIndicators]="false">
-                        @for (image of slides; track image) {
-                        <ng-template ngbSlide>
-                            <div class="picsum-img-wrapper">
-                                <img [src]=image.src alt="Random slide" />
-                                <div class="overlay"></div>
-                            </div>
-                        </ng-template>
-                        }
-                    </ngb-carousel>
+                <div class="prev-slide">
+                    <img [src]="slides[previousSlideIndex].src" alt="Previous Slide">
                 </div>
 
-                <div class="slide2">
-                    <div class="right">
-                        <ngb-carousel [showNavigationArrows]="true" [showNavigationIndicators]="true">
-                            @for (image of slides; track image) {
-                            <ng-template ngbSlide>
-                                <div class="picsum-img-wrapper">
-                                    <img [src]=image.src alt="Random slide" />
-                                    <div class="overlay"></div>
-                                </div>
-                            </ng-template>
-                            }
-                        </ngb-carousel>
-                        <h2>Antitrust focus on private equity funds and serial acquisitions</h2>
+                <div class="news">
+                    <div class="slide-show">
+                        <div class="slide" style="position: relative;">
+                            <img [src]="slides[currentIndex].src" alt="Current Slide" class="current-slide">
+                            <button class="prev" (click)="prevSlide()">&#10094;</button>
+                            <button class="next" (click)="nextSlide()">&#10095;</button>
+                        </div>
+                        <h2>
+                            {{ slides[currentIndex].title }}
+                        </h2>
                     </div>
-                    <div id="text-area" class="text-area">
-                        <p>INSIGHTS</p>
-                        <h1>The EU Corporate Sustainability Due
-                            Diligence Directive is final:
-                            how can companies prepare?
+                    <div class="text">
+                        <p>
+                            {{ slides[currentIndex].category }}
+                        </p>
+                        <h1>
+                            {{ slides[currentIndex].description }}
                         </h1>
-                        <span> Jun 24, 2024</span>
+                        <span>Aug 1, 2024</span>
                     </div>
                 </div>
             </div>
-
         </mat-tab>
     </mat-tab-group>
 </div>
