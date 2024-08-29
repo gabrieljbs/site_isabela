@@ -1,112 +1,155 @@
 .Spotlight-on {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-    margin-left: 10rem;
-    p {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: 10rem;
+  p {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 80px;
+    font-weight: 500;
+    color: #00342b;
+    margin-bottom: 5rem;
+    line-height: 80px;
+  }
+  mat-tab-group {
+    width: 100%;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.news{
+  display: flex;
+  flex-direction: column;
+  .text{
+    width: 50vw;
+    p{
+      border-left: #00342b solid 5px;
+      padding-left: 1rem;
       font-size: 16px;
       font-weight: 700;
-    }
-    h1 {
-      font-size: 80px;
-      font-weight: 500;
       color: #00342b;
-      margin-bottom: 5rem;
-      line-height: 80px;
+      text-transform: uppercase;
     }
-    mat-tab-group {
-      width: 100%;
-      .content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        ngb-carousel {
-          background: #fff;
-          width: 500px;
-          height: 700px;
-        }
-        .slide1 {
-          position: relative;
-          width: 25vw;
-          img {
-            width: 500px;
-            height: 700px;
-            object-fit: cover;
-          }
-        } 
-        .slide2 {
-          display: flex;
-          flex-direction: column;
-          align-self: flex-end;
-          .right {
-            display: flex;
-            flex-direction: row;
-            gap: 1rem;
-            h2 {
-              margin-top: 1rem;
-              color: #00884d;
-              font-size: 27px;
-              width: 15vw;
-            }
-          }
-          ngb-carousel {
-            width: 300px;
-            height: 500px;
-            align-self: flex-end;
-            margin: 0;
-          }
-          img {
-            height: 500px;
-            width: 300px;
-          }
-          .text-area {
-            p {
-              font-size: 16px;
-              font-weight: 700;
-              border-left: #00342b solid 4px;
-              padding: 0.5rem;
-              padding-left: 1rem;
-            }
-            h1 {
-              font-size: 50px;
-              font-weight: 500;
-              margin: 0;
-              width: 30vw;
-              line-height: 55px;
-              margin-bottom: 2rem;
-            }
-            span {
-              font-size: 14px;
-              font-weight: 500;
-              color: #00342b;
-            }
-          }
-        }
-        .overlay {
-          position: absolute;
-          bottom: 0;
-          left: 100%;
-          background-color: #008cba;
-          overflow: hidden;
-          width: 0;
-          height: 100%;
-          animation: overlay 2s linear forwards;
-        }
-  
-        @keyframes overlay {
-          0% {
-            left: 100%;
-            width: 0;
-          }
-          50% {
-            left: 0;
-            width: 100%;
-          }
-          100% {
-            left: 0;
-            width: 0;
-          }
-        }
-      }
+    h1{
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 55px;
+      color: #00342b;
     }
   }
+}
+.slide-show {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  h2{
+    color: #00884d;
+    font-size: 27px;
+    line-height: 33px;
+    font-weight: 500;
+    width: 12vw;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.slide {
+  width: 13vw;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.current-slide {
+  width: 100%;
+  height: auto;
+}
+
+.prev-slide {
+  width: 30vw;
+  height: 90vh;
+}
+
+.prev-slide img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #00884d;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0; /* Inicialmente escondido */
+  transition: opacity 0.3s; /* Transição suave para a visibilidade */
+}
+
+button:hover {
+  background: #00342b;
+}
+
+.slide-show:hover button {
+  opacity: 1; /* Exibe os botões ao passar o mouse */
+}
+
+button.prev {
+  left: -30px;
+}
+
+button.next {
+  right: -30px;
+}
+.progress-container {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background: #ddd;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #00884d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.1s; /* Ajuste para a transição suave */
+}
+
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.slide-indicators span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.slide-indicators span.active {
+  background: #00884d;
+}
