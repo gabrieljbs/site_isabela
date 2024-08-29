@@ -32,12 +32,12 @@ interface Data {
 })
 export class CareersComponent {
   selectedTab = 0;
-  selected = 'steak-0';
+  selected = 'brezil';
   selectedIndex: number = 0;
-  foods: Food[] = [
-    { value: 'steak-0', viewValue: 'Steak' },
-    { value: 'pizza-1', viewValue: 'Pizza' },
-    { value: 'tacos-2', viewValue: 'Tacos' },
+  place: Food[] = [
+    { value: 'brezil', viewValue: 'Brazil' },
+    { value: 'chile', viewValue: 'Chile' },
+    { value: 'usa', viewValue: 'USA' },
   ];
 
   data: Data[] = [
