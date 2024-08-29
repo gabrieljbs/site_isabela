@@ -18,12 +18,13 @@
         </p>
     </div>
     <div id="expertise-page" class="expertise-page">
-        @for (item of items; track $index) {
-            <div class="item">
+        @for (item of items.expertise; track $index) {
+            <button class="item">
                 <p>
-                    {{item}}
+                    {{item.name}}
                 </p>
-            </div>
+                <i class="bi bi-arrow-right"></i>
+            </button>
         }
     </div>
 </div>

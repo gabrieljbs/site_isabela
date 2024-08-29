@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { ExpertiseServiceService } from '../../services/ExpertiseService/expertise-service.service';
 
 @Component({
   selector: 'app-expertise',
@@ -8,5 +10,23 @@ import { Component } from '@angular/core';
   styleUrl: './expertise.component.scss',
 })
 export class ExpertiseComponent {
-  items: any[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
+  items: any;
+
+  constructor(
+    private router: Router,
+    private expertiseService: ExpertiseServiceService
+  ) {
+    this.items = this.expertiseService.getData()
+
+    console.log(this.items.expertise)
+  }
+
+
+  navigate(path:any){
+  }
+  
+  teste(name:any){
+    console.log(name)
+
+  }
 }
