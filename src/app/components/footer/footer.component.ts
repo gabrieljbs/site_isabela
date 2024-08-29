@@ -29,7 +29,7 @@ export class FooterComponent {
   navigate(path: string, page: string) {
     switch (page) {
       case 'Expertise':
-        this.router.navigate(['/expertise', path]);
+        this.router.navigate(['/expertise/', path]);
         break;
       case 'Industrie':
         this.router.navigate(['/industrie', path]);
