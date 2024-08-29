@@ -64,7 +64,10 @@ export class NewsInsightsComponent {
   }
 
   nextSlide() {
-    this.previousIndex = this.currentIndex;
-    this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+    this.previousSlideIndex = this.currentIndex; // Atualiza o índice da imagem anterior
+    this.currentIndex =
+      (this.currentIndex + this.slides.length + 1) % this.slides.length;
+    this.previousIndex =
+      (this.previousIndex + this.slides.length +1) % this.slides.length;
   }
 }
