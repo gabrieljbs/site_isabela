@@ -1,0 +1,27 @@
+<div id="explore" class="explore">
+    <div class="text-explore">
+        <h3>EXPERTISE</h3>
+        <h1>Explore our capabilities</h1>
+        <p>
+            Our teams are known for the quality of their
+            legal thinking – and for creating cutting-edge products,
+            services and technologies.
+        </p>
+        <button class="animated-button" (click)="naviagete('expertise')">ALL EXPERTISE <i
+                class="bi bi-arrow-right"></i></button>
+    </div>
+
+    <div class="scroll">
+        @for (item of items.expertise; track $index) {
+        <div class="itens">
+            <button (click)="naviagete(item.path)">
+                <h2>{{item.name}}</h2>
+                <i class="bi bi-arrow-right"></i>
+            </button>
+            <p>
+                {{item.description}}
+            </p>
+        </div>
+        }
+    </div>
+</div>

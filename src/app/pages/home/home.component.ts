@@ -13,6 +13,7 @@ import {
 import { FindAnAdvisionComponent } from '../../components/find-an-advision/find-an-advision.component';
 import { NewsInsightsComponent } from '../../components/news-insights/news-insights.component';
 import { Router } from '@angular/router';
+import { ExploreOurCapabilitesComponent } from '../../components/explore-our-capabilites/explore-our-capabilites.component';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -26,7 +27,8 @@ import { Router } from '@angular/router';
     MatTabsModule,
     NgbCarouselModule,
     FindAnAdvisionComponent,
-    NewsInsightsComponent
+    NewsInsightsComponent,
+    ExploreOurCapabilitesComponent
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],

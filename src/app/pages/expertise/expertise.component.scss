@@ -12,6 +12,7 @@
       color: #00342b;
       font-size: 80px;
       line-height: 83px;
+      font-weight: 500;
     }
     p {
       font-size: 28px;
@@ -19,6 +20,7 @@
       line-height: 39px;
       color: #00342b;
       border-top: #00884d solid 3px;
+      padding-top: 1rem;
       width: 35%;
     }
   }
@@ -45,6 +47,7 @@
     }
     p {
       align-self: center;
+      font-weight: 500;
       font-size: 18px;
       color: #00342b;
       line-height: 25px;
@@ -56,23 +59,43 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
     margin-left: 10rem;
-    justify-content: space-between;
     width: 90%;
     margin: auto;
     margin-top: 8rem;
     margin-bottom: 5rem;
     border-bottom: #00342b6b solid 3px;
-    .item {
+    button {
+      border: none;
+      background: none;
       border-top: #00342b6b solid 3px;
       width: 15vw;
       margin-bottom: 8rem;
       align-self: start;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      padding: 0%;
+      padding-top: 1rem;
+      i {
+        font-size: 20px;
+        padding-top: 5px;
+      }
       p {
         font-size: 27px;
-        padding: 1rem;
+        width: 80%;
         color: #00342b;
+        font-weight: 500;
+        line-height: 33px;
       }
-      
+    }
+
+    button:hover p {
+      color: #00884d;
+      font-style: italic;
+    }
+    button:hover i {
+      color: #00884d;
     }
   }
 }

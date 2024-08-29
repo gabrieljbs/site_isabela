@@ -2,8 +2,8 @@
     <h1>Carrers</h1>
     <mat-form-field>
         <mat-select [(value)]="selected">
-            @for (food of foods; track food) {
-            <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+            @for (place of place; track $index) {
+            <mat-option [value]="place.value">{{place.viewValue}}</mat-option>
             }
         </mat-select>
     </mat-form-field>
