@@ -16,7 +16,6 @@ export class ExploreOurCapabilitesComponent {
     private expertiseService: ExpertiseServiceService
   ) {
     this.items = this.expertiseService.getData();
-    console.log(this.items.expertise);
   }
   naviagete(path: string) {
     this.router.navigate(['/expertise/', path]);

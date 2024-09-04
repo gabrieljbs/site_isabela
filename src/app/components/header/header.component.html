@@ -1,54 +1,70 @@
 <div class="main" (mouseleave)="onMouseLeave()" (mouseenter)="onMouseEnter()">
-    <div [@growShrink]="isExpanded ? 'expanded':'collapsed'" class="animated-div">
-
-        <button class="logo" >
-            <h2>Isabela Morbach</h2>
-        </button>
-
+    <div class="logo">
+        <h1>costa rodirgues</h1>
+        <p>advogados</p>
     </div>
     <ul ngbNav #nav="ngbNav" class="nav-tabs" [(activeId)]="activeTabId">
         <li>
-            <button (click)="navigate('people-search')">
-                <p>Find people</p>
+            <button (click)="navigate('people-search')" (mouseenter)="closeContent()">
+                <p>Pessoas</p>
             </button>
         </li>
-
-        @for(item of navbar; track $index) {
-        <li [ngbNavItem]="$index">
-            <button (click)="openContent($index)" (click)="onMouseEnter()">
-                <p>{{item.name}} <i class="bi bi-caret-down-fill"></i></p>
+        <li>
+            <button (click)="navigate('careers')" (mouseenter)="closeContent()">
+                <p>O escritório</p>
             </button>
-            <ng-template ngbNavContent>
-                <div class="content" [@growShrink]="!isCollapsed ? 'collapsed' : 'expanded'">
-                    <h1>{{item.name}}</h1>
-                    <app-select-nav [dataInput]=item.path></app-select-nav>
-                </div>
-            </ng-template>
         </li>
-        }
+        <li><button (click)="navigate('newsroom')" (mouseenter)="closeContent()">
+                <p>Atuação</p>
+            </button>
+        </li>
+        <li>
+            <button (click)="navigate('careers')" (mouseenter)="closeContent()">
+                <p>insights</p>
+            </button>
+        </li>
+        <li><button (click)="navigate('newsroom')" (mouseenter)="closeContent()">
+                <p>Carreira</p>
+            </button>
+        </li>
 
         <li>
-            <button (click)="navigate('careers')">
-                <p>Carrers</p>
-            </button>
+            <div class="toggle-switch">
+                <input type="checkbox" id="toggle" class="toggle-checkbox">
+                <label for="toggle" class="toggle-label">
+                    <span class="toggle-text">PT</span>
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-text">EN</span>
+                </label>
+            </div>
         </li>
-        <li><button (click)="navigate('newsroom')">
-                <p>Newsroom</p>
-            </button>
-        </li>
-        <li [ngbNavItem]="6">
-            <button>
+        <li>
+            <button (mouseenter)="closeContent()" (click)="openContent(3)">
                 <p><i class="bi bi-search"></i></p>
             </button>
-            <ng-template ngbNavContent>
-                <app-search></app-search>
-            </ng-template>
         </li>
+        <!-- 
+            @for(item of navbar; track $index) {
+            <li [ngbNavItem]="$index">
+                <button (mouseenter)="openContent($index)">
+                    <p>
+                        {{item.name}}
+                         <i class="bi bi-caret-down-fill"></i>
+                    </p>
+                </button>
+                <ng-template ngbNavContent>
+                    <div class="content">
+                        <h1>{{item.name}}</h1>
+                        <app-select-nav [dataInput]=item.path></app-select-nav>
+                    </div>
+                </ng-template>
+            </li>
+            } -->
     </ul>
     @if (isActive) {
     <div [ngbNavOutlet]="nav" class="mt-0"></div>
     }
 </div>
-@if (isExpanded) {
+<!-- @if (isExpanded) {
 <div class="back"></div>
-}
+} -->

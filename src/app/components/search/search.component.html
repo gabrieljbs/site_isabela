@@ -1,1 +1,19 @@
-<p>search works!</p>
+<div id="search" class="search">
+    <form action="">
+        <mat-form-field class="form-field">
+            <input matInput type="text" [(ngModel)]="value" [placeholder]="placeholder" matInput
+                [formControl]="myControl" [matAutocomplete]="auto">
+
+            @if (value) {
+            <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                <mat-icon>close</mat-icon>
+            </button>
+            }
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                @for (option of filteredOptions | async; track option) {
+                <mat-option [value]="option">{{option}}</mat-option>
+                }
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
+</div>

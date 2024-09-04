@@ -24,12 +24,6 @@ import { SearchComponent } from '../search/search.component';
       state('expanded', style({ height: '*' })),
       transition('collapsed <=> expanded', [animate('300ms ease-in-out')]),
     ]),
-    // Animação slideIn
-    trigger('growShrink', [
-      state('collapsed', style({ height: '0px', opacity: 0, overflow: 'hidden' })),
-      state('expanded', style({ height: '*', opacity: 1 })),
-      transition('collapsed <=> expanded', [animate('500ms ease-in-out')]),
-    ]),
   ]
 })
 export class HeaderComponent {
@@ -56,8 +50,7 @@ active: any;
 
   constructor(
     private router: Router
-  ) {
-   
+  ) { 
   }
 
   onMouseEnter() {
@@ -70,8 +63,9 @@ active: any;
   }
 
   openContent(index: number): void {
+
+    console.log(index)
     this.isCollapsed = true;
-    console.log(this.isCollapsed)
     this.isActive = true;
     this.activeTabId = index;
   }
@@ -85,8 +79,5 @@ active: any;
   navigate(path: any) {
     this.router.navigate(['/', path]);
   }
-  
-
-
   
 }
