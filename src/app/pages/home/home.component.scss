@@ -12,9 +12,10 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 10rem;
+  gap: 5rem;
   align-items: center;
   margin-left: 10rem;
+  margin-top: 3rem;
   img {
     height: 940px;
   }
@@ -22,9 +23,18 @@ p {
     width: 15vw;
     color: #00342b;
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
     h1 {
       font-size: 3vw;
       line-height: 3.5rem;
+    }
+    h6 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 3.5rem;
+      color: #fe6e5b;
+      text-transform: lowercase;
     }
     P {
       font-weight: 500;
@@ -32,8 +42,8 @@ p {
     }
     .item {
       border: none;
-      border-top: solid 3px #00884d;
-      margin-top: 5rem;
+      border-top: solid 3px #fe6e5b;
+      margin-top: 1rem;
       margin-left: 5rem;
       padding-top: 2rem;
       line-height: 1.5rem;
@@ -42,6 +52,11 @@ p {
         font-weight: 500;
         font-size: 16px;
       }
+    }
+    .animated-button {
+      text-transform: uppercase;
+      margin-top: 100%;
+
     }
   }
   .overlay-animated {
