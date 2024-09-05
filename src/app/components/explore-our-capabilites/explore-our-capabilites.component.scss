@@ -2,46 +2,50 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 90vh;
   gap: 10rem;
   margin: auto;
-  margin-top: 10rem;
-  margin-left: 10rem;
   .text-explore {
-    background-color: #00342b;
-    color: #fff;
-    padding: 4rem 4rem 7.5rem;
-    width: 55vw;
-    height: 100%;
+    background-color: #035151;
+    padding: 7rem 7rem 7.5rem;
+    width: 30vw;
     h3 {
       font-weight: 700;
       font-size: 14px;
+      color: #fe6e5b;
+    }
+    h1 {
+      color: #fff;
+      font-size: 48px;
+      line-height: 55px;
+      font-weight: 500;
     }
     p {
       color: #fff;
       font-size: 18px;
       font-weight: 500;
       line-height: 25px;
+      width: 14vw;
+      border-top: 3px solid #fe6e5b;
+      padding-top: 2rem;
+      margin: auto;
+      margin-bottom: 4rem;
     }
-    h1 {
-      color: #fff;
-      font-size: 50px;
-      line-height: 55px;
-      font-weight: 500;
+
+    img {
+      position: relative;
+      left: 4rem;
     }
   }
   .scroll {
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    height: 100%;
     width: 100%;
-    overflow: scroll;
-    scrollbar-width: none;
-
+    margin-top: 10rem;
     .itens {
       color: #00342b;
-      width: 40vw;
-      padding: 1rem;
+      width: 50vw;
       h2 {
         font-size: 34px;
         font-weight: 500;
@@ -67,28 +71,10 @@
         justify-content: space-between;
 
         i {
-            margin-right: 1rem;
+          margin-right: 1rem;
           font-size: 25px;
         }
       }
     }
   }
-}
-.animated-button {
-  background-color: #00342b;
-  color: #00884d;
-  border: none;
-  border-left: solid 5px #00884d;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-position 0.5s, color 0.5s;
-  background-size: 200% 100%;
-  background-image: linear-gradient(to right, #00342b 50%, #00884d 50%);
-  height: 55px;
-}
-.animated-button:hover {
-  background-position: -100% 0;
-  color: #fff;
 }
