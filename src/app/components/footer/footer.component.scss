@@ -1,48 +1,120 @@
-.container{
+footer {
+  background-color: #efefef;
+  padding-top: 1rem;
+}
+
+.top {
+  width: 100vw;
+  height: 10vh;
+  background-color: #fe6e5b;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  p {
+    color: #efefef;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .contact-btn {
+    border: none;
+    background-color: #505050;
+    color: #efefef;
+    border-radius: 20px;
+    width: 15vw;
+    height: 7vh;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #505050;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  height: 50vh;
+  button {
+    background: none;
+    border: none;
+  }
+
+  a:link,
+  a:visited {
+    color: #00342b;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active {
+    color: #00884d;
+  }
+  ul {
+    padding-top: 1rem;
+    list-style-type: none;
+  }
+
+  h5 {
+    color: #505050;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #505050;
+    padding: 0.25rem 0;
+  }
+
+  P:hover {
+    color: #00884d;
+  }
+  .social {
+   h5{
+    border-bottom: #fe6e5b solid 3px;
+    width: 10vw;
+   }
+  }
+}
+
+.bottom{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly   ;
-    gap: 2rem;
-    padding-bottom: 2rem;
-    height: 50vh;
-    button {
-        background: none;
-        border: none;
-      }
-    
-    a:link, a:visited {
-        color: #00342b;
-        text-align: center;
-        text-decoration: none;
-      }
-      
-      a:hover, a:active {
-        color: #00884d;
-      }
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    background-color: #FFF;
+    padding: 2rem;
+    padding-top: 4rem;
     ul{
-        padding-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
         list-style-type: none;
-    }
- 
-    h5{
-        color: #00342b;
-        margin-bottom: 2rem;
-        font-weight: 600;
-        font-size: 18px;
+        li{
+            font-size: 16px;
+            font-weight: 500;
+        }
     }
     p{
-        font-size: 18px;
-        font-weight: 500;
-        color: #00342b;
-        padding: 0.25rem 0;
-    }
-
-    P:hover{
-        color: #00884d;
-    }
-    .social{
-        border: none;
-        border-left: #00884d solid 3px;
-
+        color: #505050;
     }
 }

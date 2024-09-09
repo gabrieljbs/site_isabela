@@ -17,62 +17,34 @@
         </div>
         <button class="animated-button">Saiba mais <i class="bi bi-arrow-right"></i></button>
     </div>
-    <!-- <div class="overlay-animated"></div> -->
 </div>
-<!-- <div class="scroll-bar-rigth">
-    <div class="scroll-animated"></div>
-    <div class="scroll-down">
-        <i class="bi bi-arrow-down"></i>
-    </div>
-</div> -->
 
 <app-news-insights></app-news-insights>
 <app-explore-our-capabilites></app-explore-our-capabilites>
 <app-find-an-advision></app-find-an-advision>
-<div class="carousel">
-    <div id="slides" class="slides">
-        @for (item of image; track $index) {
-        <img [src]=item.src alt="" [style.height]="item.height">
-        }
-    </div>
-    <div id="slides" class="slides">
-        @for (item of image; track $index) {
-        <img [src]=item.src alt="" [style.height]="item.height">
-        }
-    </div>
-</div>
-
-<div id="global-coverage" class="global-coverage">
-    <div class="text-area">
-        <p>GLOBAL COVERAGE</p>
-        <H1>Where you are, we are</H1>
-    </div>
-    <div class="list">
-        <ul>
-            <li><a href="#">Global coverage</a></li>
-            <li><a href="#">North America</a></li>
-            <li><a href="#">Europe</a></li>
-            <li><a href="#">Asia Pacific</a></li>
-            <li><a href="#">Middle East</a></li>
-            <li><a href="#">Africa</a></li>
-            <li><a href="#">Latin America and the Caribbean</a></li>
-            <li><a href="#">Global Experts and Markets</a></li>
-        </ul>
-    </div>
-</div>
 
 <div id="join-us" class="join-us">
     <div class="text-area">
-        <h5>Join us</h5>
-        <h1>No ordinary career</h1>
-        <p>All the opportunities you would expect from a
-            world-leading law firm. And some you might not.
+        <h5>Diversidade, equidade e inclusão</h5>
+        <h1>Dummy text of the printing and typesetting industry</h1>
+        <p>
+            It has survived not only five centuries,
+            but also the leap into electronic typesetting,
+            remaining essentially unchanged.
         </p>
-        <button class="animated-button" (click)="naviagete('careers')">EXPLORER<i
-                class="bi bi-arrow-right"></i></button>
+        <button class="button" (click)="naviagete('careers')">SAIBA MAIS <i class="bi bi-arrow-right"></i></button>
     </div>
+
     <div class="image">
-        <img src="assets/image-14.webp" alt="">
+        <img src="assets/working.png" alt="">
+        <div class="tag">
+            <p>
+                Not only five centuries,
+                but also the leap into electronic
+                typesetting, remaining essentially unchanged.
+            </p>
+        </div>
     </div>
+    <div class="back"></div>
 
 </div>

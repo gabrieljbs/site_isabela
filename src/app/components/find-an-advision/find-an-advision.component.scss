@@ -1,22 +1,43 @@
-// Find on advision
+.content {
+  background: linear-gradient(to right, #fff 10%, #035151 10%);
+}
 .find-an-advisor {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #00342b !important;
+
   width: 100vw;
-  margin-top: 10rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
   gap: 10rem;
-  .text-advisor {
-    width: 24vw;
+  .text {
+    width: 30vw;
+    h3 {
+      font-weight: 700;
+      font-size: 14px;
+      color: #fe6e5b;
+    }
     h1 {
       color: #fff;
+      font-size: 48px;
+      line-height: 55px;
+      font-weight: 500;
     }
     p {
-      padding-top: 1rem;
       color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 25px;
+      width: 14vw;
+      border-top: 3px solid #fe6e5b;
+      padding-top: 2rem;
+      margin: auto;
+      margin-bottom: 4rem;
+    }
+
+    img {
+      position: relative;
+      left: 4rem;
     }
   }
   .form {
@@ -34,18 +55,18 @@
     mat-form-field {
       width: 30vw;
       color: #000;
-      background: #00342b;
+      background: #035151;
       mat-select {
         color: #c9c9c9;
-        font-weight: 500;   
+        font-weight: 500;
       }
     }
   }
 }
 // Botão all expertise
 .animated-button-2 {
-  background-color: #00342b;
-  color: #00884d;
+  background-color: #035151;
+  color: #fff;
   border: none;
   border-left: solid 5px #00884d;
   padding: 10px 20px;
@@ -54,10 +75,35 @@
   cursor: pointer;
   transition: background-position 0.5s, color 0.5s;
   background-size: 200% 100%;
-  background-image: linear-gradient(to right, #00342b 50%, #00884d 50%);
+  background-image: linear-gradient(to right, #035151 50%, #00884d 50%);
   height: 55px;
 }
 .animated-button-2:hover {
   background-position: -100% 0;
   color: #fff;
+}
+
+.imagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    height: 35vh;
+  }
+  .up {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    z-index: 2;
+  }
+  .down {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80vw;
+    position: relative;
+    top: -50px;
+    z-index: 1;
+  }
 }
