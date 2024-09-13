@@ -9,6 +9,7 @@ import { ContinentsDetailComponent } from './pages/continents-detail/continents-
 import { CareersComponent } from './pages/careers/careers.component';
 import { NewsroomComponent } from './pages/newsroom/newsroom.component';
 import { IndustriesDetailComponent } from './pages/industries-detail/industries-detail.component';
+import { OfficeComponent } from './pages/office/office.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,7 +20,8 @@ export const routes: Routes = [
   { path: 'industries', component: IndustriesComponent },
   { path: 'industries/:id', component: IndustriesDetailComponent },
   { path: 'expertise', component: ExpertiseComponent },
-  { path: 'expertise/:id', component: ExpertiseDetailComponent},
+  { path: 'expertise/:id', component: ExpertiseDetailComponent },
   { path: 'global-coverage', component: GlobalCoverageComponent },
   { path: 'global-coverage/:id', component: ContinentsDetailComponent },
+  { path: 'office', component: OfficeComponent },
 ];
