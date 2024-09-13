@@ -1,0 +1,199 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 7rem;
+    h1 {
+      color: #035151;
+      font-size: 96px;
+      font-weight: 400;
+      font-style: italic;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      color: #fe6e5b;
+      width: 30vw;
+    }
+  }
+  .text-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    gap: 3rem;
+    .text {
+      display: flex;
+      flex-direction: column;
+      width: 30vw;
+      h2 {
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 55px;
+        color: #035151;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 16px;
+        color: #505050;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.content {
+  background-color: #035151;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 5rem;
+}
+
+.info {
+  width: 45vw;
+  margin-top: 10rem;
+
+  h1 {
+    font-size: 48px;
+    color: #fff;
+    line-height: 55px;
+  }
+
+  p {
+    color: #fe6e5b;
+    font-size: 16px;
+  }
+
+  .row-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 5rem;
+    padding-bottom: 4rem;
+
+    .image-icon {
+      height: 50vh;
+      align-self: flex-end;
+    }
+
+    .text-image {
+      width: 25vw;
+
+      p {
+        font-size: 16px;
+        color: #ffffff;
+        margin-top: 1rem;
+      }
+
+      .arara {
+        border-left: #39e2b0 solid 32px;
+      }
+    }
+  }
+}
+
+.capability {
+  display: flex;
+  justify-content: center;
+}
+
+.capability ul {
+  list-style-type: none;
+  border-left: 50px solid;
+  height: 100vh;
+  padding-left: 10rem;
+  border-image: linear-gradient(to bottom, #035151 60%, #39e2b0 40%) 1;
+  margin-bottom: 0;
+}
+
+.capability ul li {
+  width: 50vw;
+  margin-top: 3rem;
+}
+
+.capability ul li h1 {
+  font-size: 46px;
+  font-weight: 400;
+  color: #035151;
+}
+
+.capability ul li p {
+  font-size: 16px;
+  color: #505050;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: row;
+  height: 1081px;
+  .text-about-us {
+    background: #035151;
+    width: 30vw;
+    height: 100%;
+    margin-left: 23rem;
+    padding: 4rem 2rem 0rem 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    h6 {
+      color: #fe6e5b;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 48px;
+      line-height: 55px;
+    }
+
+    p {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      border-top: #fe6e5b solid 2px;
+      padding-top: 2rem;
+      width: 15vw;
+      align-self: flex-end;
+    }
+  }
+
+  .lista{
+    ul{
+        list-style: none;
+        margin-top: 10rem;
+        margin-left: 5rem;
+        li{
+            font-size: 36px;
+            color: #035151;
+            font-weight: 400;
+            margin-top: 2.5rem;
+        }
+    }
+  }
+}
+
+.button {
+  border: none;
+  border-left: solid 5px #035151;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-position 0.5s, color 0.5s;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, #ffff 50%, #035151 50%);
+  height: 55px;
+  margin-top: 5rem;
+  color: #fe6e5b;
+  background: none;
+  align-self: start;
+}
+.button:hover {
+  background-position: -100% 0;
+  color: #fff;
+}
