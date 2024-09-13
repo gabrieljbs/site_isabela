@@ -41,7 +41,7 @@ export class PeopleSearchComponent {
   showPageSizeOptions: boolean = false;
   pageSizeOptions = [5, 10, 25];
   toppings = new FormControl('');
-  placeholder = 'Search by name, expertise or industry';
+  placeholder = 'Procure pelo nome, expertise or indústria';
   toppingList: string[] = [
     'Extra cheese',
     'Mushroom',
@@ -53,41 +53,13 @@ export class PeopleSearchComponent {
   value = '';
   people: any = [
     {
-      src: 'assets/image-11.webp',
-      name: 'Kfir Abutbul',
-      position: 'Partner',
-      location: 'Houstons',
-    },
-    {
-      src: 'assets/image-12.webp',
-      name: 'Kfir Abutbul',
-      position: 'Partner',
-      location: 'Houstons',
-    },
-    {
-      src: 'assets/image-13.webp',
-      name: 'Kfir Abutbul',
-      position: 'Partner',
-      location: 'Houstons',
-    },
-    {
-      src: 'assets/image-11.webp',
-      name: 'Kfir Abutbul',
-      position: 'Partner',
-      location: 'Houstons',
-    },
-    {
-      src: 'assets/image-12.webp',
-      name: 'Kfir Abutbul',
-      position: 'Partner',
-      location: 'Houstons',
-    },
-    {
-      src: 'assets/image-13.webp',
-      name: 'Kfir Abutbul',
-      position: 'Partner',
-      location: 'Houstons',
-    },
+      src: 'assets/mask.png',
+      name: 'Edna Mode',
+      position: 'Sócia Diretora',
+      email:'ednamode@cosro.com',
+      phone:'+55 11 0000.0000',
+      office:'Belfast',
+    }
   ];
   myControl = new FormControl('');
   options: string[] = ['One', 'Two', 'Three'];
