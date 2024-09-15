@@ -1,0 +1,111 @@
+<div class="introduction">
+    <div class="top">
+        <div class="text">
+            <h1>Sustentabilidade Ambiental</h1>
+            <h2>You need to be sure there isn't anything embarrassing hidden in the middle of text</h2>
+            <p>
+                O Costa Rodrigues foi formado em 2024 através da parceria entre advogados com uma
+                nova forma de visualizar futuro da advocacia, kcmidcic snis sdnhbwd bxndn sbcxh xhb.
+            </p>
+        </div>
+        <img src="./../../../assets/flores.png" alt="">
+    </div>
+
+    <div class="content">
+        <img src="./../../../assets/globo.png" alt="">
+        <div class="text-content">
+            <h1>You need to be sure there isn't anything embarrassing hidden in the middle of text</h1>
+            <p>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                alteration in some form, by injected humour, or randomised words which don't look
+                even slightly believable.
+            </p>
+            <p>
+                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing
+                hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined
+                chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over
+                200 Latin words, combined with a handful of model sentence structures, to generate Lorem
+                Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition,
+                injected humour, or non-characteristic words etc.
+            </p>
+            <p>
+                Use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
+                middle oftext. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
+                necessary, making this the first true generator on the Internet. It uses a dictionary of over 200
+                Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which
+                looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected
+                humour, or non-characteristic words etc.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="search">
+    <div class="text">
+        <h6>Diversidade, equidade e inclusão</h6>
+        <h1>Encontre um especialista</h1>
+        <p>
+            It has survived not only five centuries,
+            but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+        </p>
+    </div>
+
+    <div class="select">
+        <mat-form-field>
+            <mat-label>Expertise</mat-label>
+            <mat-select [formControl]="toppings" multiple>
+                @for (topping of toppingList; track topping) {
+                <mat-option [value]="topping">{{topping}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Industries</mat-label>
+            <mat-select [formControl]="toppings" multiple>
+                @for (topping of toppingList; track topping) {
+                <mat-option [value]="topping">{{topping}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Location</mat-label>
+            <mat-select [formControl]="toppings" multiple>
+                @for (topping of toppingList; track topping) {
+                <mat-option [value]="topping">{{topping}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+        <button class="button">SAIBA MAIS <i class="bi bi-arrow-right"></i></button>
+    </div>
+</div>
+
+
+<div class="expertise">
+    <div class="line">
+        
+    </div>
+    <div class="text-expertise">
+        <h1>Especialidades relacionadas</h1>
+        <p>
+            It has survived not only five
+            centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged.
+        </p>
+    </div>
+
+    <div class="scroll">
+        @for (item of items.expertise; track $index) {
+        <div class="itens">
+            <button (click)="naviagete(item.path)">
+                <h2>{{item.name}}</h2>
+                <i class="bi bi-arrow-right"></i>
+            </button>
+            <p>
+                {{item.description}}
+            </p>
+        </div>
+        }
+    </div>
+
+</div>
