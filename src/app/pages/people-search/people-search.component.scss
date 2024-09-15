@@ -2,10 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #00342b;
+  background-color: none;
   width: 100vw;
   height: 20vh;
-
   .form-field {
     width: 80vw;
     input {
@@ -23,54 +22,46 @@
   align-items: center;
   gap: 1rem;
   mat-form-field {
-    width: 20vw;
-    padding: 20px;
+    width: 26vw;
+    
   }
+}
+.people {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 2rem;
 }
 
 .people {
   display: flex;
   flex-direction: column;
- 
   align-items: center;
   margin-left: 10rem;
   margin-right: 10rem;
+  margin-top: 2rem;
+}
 
-  h1 {
-    align-self: start;  
-    font-size: 55px;
-    color: #00342b;
-    font-weight: 500;
-  }
+.people h1 {
+  align-self: start;
+  font-size: 96px;
+  color: #035151;
+  font-weight: 500;
+  font-style: italic;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   gap: 1rem;
-
-  h2 {
-    margin-top: 2rem;
-    color: #00342b;
-    font-size: 27px;
-    font-weight: 500;
-  }
-  h3 {
-    font-size: 14px;
-    font-weight: 700;
-    color: #0fbb73;
-    text-transform: uppercase;
-  }
-  p {
-    color: #00342b;
-    font-size: 18px;
-    font-weight: 500;
-  }
 }
 
 .profile-card {
-  text-align: start;
-  padding: 10px;
+  background-color: #035151;
+  width: 415px;
+  padding-bottom: 1rem;
 }
 
 .profile-img {
@@ -79,4 +70,55 @@
   aspect-ratio: 3 / 4; /* Define a proporção 3:4 */
   object-fit: cover; /* Garante que a imagem cubra o espaço disponível */
   border-bottom: 1px solid #ddd;
+}
+
+.data {
+  padding-left: 2rem;
+  margin: 0;
+}
+
+.data h2 {
+  margin-top: 2rem;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.data h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #39e2b0;
+  margin-bottom: 3rem;
+}
+.info-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.label-column {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.value-column {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.v-card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  background: none;
+  border-radius: 50px;
+  border: solid 1px #FE6E5B;
+  width: 7vw;
+  
+  p{
+    margin: auto;
+  }
 }

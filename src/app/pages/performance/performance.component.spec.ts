@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GlobalCoverageComponent } from './global-coverage.component';
+import { PerformanceComponent } from './performance.component';
 
-describe('GlobalCoverageComponent', () => {
-  let component: GlobalCoverageComponent;
-  let fixture: ComponentFixture<GlobalCoverageComponent>;
+describe('PerformanceComponent', () => {
+  let component: PerformanceComponent;
+  let fixture: ComponentFixture<PerformanceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GlobalCoverageComponent]
+      imports: [PerformanceComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(GlobalCoverageComponent);
+    fixture = TestBed.createComponent(PerformanceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
