@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import {
   trigger,
@@ -10,11 +10,12 @@ import {
 import { Router } from '@angular/router';
 import { SelectNavComponent } from '../select-nav/select-nav.component';
 import { SearchComponent } from '../search/search.component';
-
+import { Location } from '@angular/common';
+import { LOCALE_ID } from '@angular/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgbNavModule,SelectNavComponent,SearchComponent],
+  imports: [NgbNavModule, SelectNavComponent, SearchComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   animations: [
@@ -24,7 +25,7 @@ import { SearchComponent } from '../search/search.component';
       state('expanded', style({ height: '*' })),
       transition('collapsed <=> expanded', [animate('300ms ease-in-out')]),
     ]),
-  ]
+  ],
 })
 export class HeaderComponent {
   activeTabId: number | null = null;
@@ -35,22 +36,30 @@ export class HeaderComponent {
   navbar: any = [
     {
       name: 'Capabilite',
-      path:"capabilite"
+      path: 'capabilite',
     },
     {
       name: 'Insights',
-      path:"insights"
+      path: 'insights',
     },
     {
       name: 'About us',
-      path:"about-us"
+      path: 'about-us',
     },
   ];
-active: any;
+  active: any;
 
   constructor(
+    @Inject(LOCALE_ID) public localeId: string,
+    private location: Location,
     private router: Router
-  ) { 
+  ) {}
+
+  changeLanguage(lang: any) {
+
+    console.log(lang)
+    /* const url = this.location.path();
+    window.location.href = `/${lang}${url}`; */
   }
 
   onMouseEnter() {
@@ -63,13 +72,11 @@ active: any;
   }
 
   openContent(index: number): void {
-
-    console.log(index)
+    console.log(index);
     this.isCollapsed = true;
     this.isActive = true;
     this.activeTabId = index;
   }
-
 
   closeContent() {
     this.isCollapsed = false;
@@ -79,5 +86,4 @@ active: any;
   navigate(path: any) {
     this.router.navigate(['/', path]);
   }
-  
 }

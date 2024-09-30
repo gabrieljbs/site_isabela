@@ -1,12 +1,12 @@
 <div class="main" (mouseleave)="onMouseLeave()" (mouseenter)="onMouseEnter()">
-    <div class="logo">
+    <div class="logo" (click)="navigate('home')">
         <h1>costa rodirgues</h1>
-        <p>advogados</p>
+        <p i18n>advogados</p>
     </div>
     <ul ngbNav #nav="ngbNav" class="nav-tabs" [(activeId)]="activeTabId">
         <li>
             <button (click)="navigate('people-search')" (mouseenter)="closeContent()">
-                <p>Pessoas</p>
+                <p i18n>Pessoas</p>
             </button>
         </li>
         <li>
@@ -15,22 +15,22 @@
             </button>
         </li>
         <li><button (click)="navigate('performance')" (mouseenter)="closeContent()">
-                <p>Atuação</p>
+                <p i18n>Atuação</p>
             </button>
         </li>
         <li>
             <button (click)="navigate('newsroom')" (mouseenter)="closeContent()">
-                <p>insights</p>
+                <p i18n>insights</p>
             </button>
         </li>
         <li><button (click)="navigate('careers')" (mouseenter)="closeContent()">
-                <p>Carreira</p>
+                <p i18n>Carreira</p>
             </button>
         </li>
 
         <li>
             <div class="toggle-switch">
-                <input type="checkbox" id="toggle" class="toggle-checkbox">
+                <input type="checkbox" id="toggle" class="toggle-checkbox" (change)="changeLanguage($event)">
                 <label for="toggle" class="toggle-label">
                     <span class="toggle-text">PT</span>
                     <span class="toggle-slider"></span>
