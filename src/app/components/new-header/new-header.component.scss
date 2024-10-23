@@ -1,0 +1,20 @@
+.details-container {
+    position: absolute;
+    top: 60px; /* Abaixo do navbar */
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .details-container p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .details-container a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
