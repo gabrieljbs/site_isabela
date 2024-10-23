@@ -33,6 +33,8 @@ export class HeaderComponent {
   activeTab: number | null = null;
   isExpanded = false;
   isCollapsed = false;
+  active = 1;
+  hoveredItem: string | null = null;
   navbar: any = [
     {
       name: 'Capabilite',
@@ -47,7 +49,6 @@ export class HeaderComponent {
       path: 'about-us',
     },
   ];
-  active: any;
 
   constructor(
     @Inject(LOCALE_ID) public localeId: string,
@@ -56,12 +57,18 @@ export class HeaderComponent {
   ) {}
 
   changeLanguage(lang: any) {
-
-    console.log(lang)
+    console.log(lang);
     /* const url = this.location.path();
     window.location.href = `/${lang}${url}`; */
   }
 
+  showDetails(item: string) {
+    this.hoveredItem = item;
+  }
+
+  hideDetails() {
+    this.hoveredItem = null;
+  }
   onMouseEnter() {
     this.isExpanded = true;
   }
@@ -85,5 +92,6 @@ export class HeaderComponent {
 
   navigate(path: any) {
     this.router.navigate(['/', path]);
+    this.hoveredItem = null;
   }
 }

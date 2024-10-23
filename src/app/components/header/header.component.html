@@ -1,70 +1,239 @@
-<div class="main" (mouseleave)="onMouseLeave()" (mouseenter)="onMouseEnter()">
+<div>
+  <div class="main" (mouseleave)="onMouseLeave()" (mouseenter)="onMouseEnter()">
     <div class="logo" (click)="navigate('home')">
-        <h1>costa rodirgues</h1>
-        <p i18n>advogados</p>
+      <h1>costa rodirgues</h1>
+      <p i18n>advogados</p>
     </div>
-    <ul ngbNav #nav="ngbNav" class="nav-tabs" [(activeId)]="activeTabId">
-        <li>
-            <button (click)="navigate('people-search')" (mouseenter)="closeContent()">
-                <p i18n>Pessoas</p>
-            </button>
-        </li>
-        <li>
-            <button (click)="navigate('office')" (mouseenter)="closeContent()">
-                <p>O escritório</p>
-            </button>
-        </li>
-        <li><button (click)="navigate('performance')" (mouseenter)="closeContent()">
-                <p i18n>Atuação</p>
-            </button>
-        </li>
-        <li>
-            <button (click)="navigate('newsroom')" (mouseenter)="closeContent()">
-                <p i18n>insights</p>
-            </button>
-        </li>
-        <li><button (click)="navigate('careers')" (mouseenter)="closeContent()">
-                <p i18n>Carreira</p>
-            </button>
-        </li>
+    <ul ngbNav #nav="ngbNav" class="nav-tabs">
+      <li>
+        <button
+          class="bnt-title"
+          (mouseenter)="closeContent()"
+          (mouseenter)="showDetails('pessoal')"
+        >
+          <p i18n>Pessoas</p>
+        </button>
+      </li>
+      <li>
+        <button
+          class="bnt-title"
+          (mouseenter)="closeContent()"
+          (mouseenter)="showDetails('escritorio')"
+        >
+          <p>O escritório</p>
+        </button>
+      </li>
+      <li>
+        <button
+          class="bnt-title"
+          (mouseenter)="closeContent()"
+          (mouseenter)="showDetails('atuacao')"
+        >
+          <p i18n>Atuação</p>
+        </button>
+      </li>
+      <li>
+        <button class="bnt-title" (mouseenter)="closeContent()">
+          <p i18n>insights</p>
+        </button>
+      </li>
+      <li>
+        <button class="bnt-title" (mouseenter)="closeContent()">
+          <p i18n>Carreira</p>
+        </button>
+      </li>
 
-        <li>
-            <div class="toggle-switch">
-                <input type="checkbox" id="toggle" class="toggle-checkbox" (change)="changeLanguage($event)">
-                <label for="toggle" class="toggle-label">
-                    <span class="toggle-text">PT</span>
-                    <span class="toggle-slider"></span>
-                    <span class="toggle-text">EN</span>
-                </label>
-            </div>
-        </li>
-        <li>
-            <button (mouseenter)="closeContent()" (click)="openContent(3)">
-                <p><i class="bi bi-search"></i></p>
-            </button>
-        </li>
-        <!-- 
-            @for(item of navbar; track $index) {
-            <li [ngbNavItem]="$index">
-                <button (mouseenter)="openContent($index)">
-                    <p>
-                        {{item.name}}
-                         <i class="bi bi-caret-down-fill"></i>
-                    </p>
-                </button>
-                <ng-template ngbNavContent>
-                    <div class="content">
-                        <h1>{{item.name}}</h1>
-                        <app-select-nav [dataInput]=item.path></app-select-nav>
-                    </div>
-                </ng-template>
-            </li>
-            } -->
+      <li>
+        <div class="toggle-switch">
+          <input
+            type="checkbox"
+            id="toggle"
+            class="toggle-checkbox"
+            (change)="changeLanguage($event)"
+          />
+          <label for="toggle" class="toggle-label">
+            <span class="toggle-text">PT</span>
+            <span class="toggle-slider"></span>
+            <span class="toggle-text">EN</span>
+          </label>
+        </div>
+      </li>
+      <li>
+        <button
+          class="btn-nav"
+          (mouseenter)="closeContent()"
+          (click)="openContent(3)"
+        >
+          <p><i class="bi bi-search"></i></p>
+        </button>
+      </li>
     </ul>
-    @if (isActive) {
-    <div [ngbNavOutlet]="nav" class="mt-0"></div>
-    }
+  </div>
+
+  <!-- Componente de detalhes abaixo do navbar -->
+  @if (hoveredItem) {
+  <div style="position: absolute; z-index: 3">
+    <div class="details-container" (mouseleave)="hideDetails()">
+      @if (hoveredItem === 'pessoal') {
+      <div class="details-content">
+        <h1>Pessoal</h1>
+        <ul>
+          <li (click)="navigate('people-search')">
+            <b><i class="bi bi-arrow-right">&nbsp;&nbsp;</i>Sócios</b>
+            <p>
+              Perfis com foto, biografia completa, informações de contato e
+              setores e áreas de atuação.
+            </p>
+          </li>
+          <li (click)="navigate('people-search')">
+            <b><i class="bi bi-arrow-right">&nbsp;&nbsp;</i>Counsel</b>
+            <p>Perfis com breve biografia e informações de contato.</p>
+          </li>
+          <li (click)="navigate('people-search')">
+            <b><i class="bi bi-arrow-right">&nbsp;&nbsp;</i>Associados</b>
+            <p>Perfis simplificados com informações básicas e contatos.</p>
+          </li>
+        </ul>
+      </div>
+      } @if (hoveredItem === 'atuacao') {
+      <div class="details-content-2">
+        <h1>Atuação</h1>
+        <div class="grid-list">
+          <ul>
+            <li (click)="navigate('newsroom')">
+              <p>
+                <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>Relatórios e
+                resultados anuais
+              </p>
+            </li>
+            <li (click)="navigate('newsroom')">
+              <p>
+                <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>Liderança firme
+              </p>
+            </li>
+            <li (click)="navigate('newsroom')">
+              <p>
+                <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>Sustentabilidade
+                ambiental
+              </p>
+            </li>
+            <li (click)="navigate('newsroom')">
+              <p><i class="bi bi-arrow-right">&nbsp;&nbsp;</i>Impacto social</p>
+            </li>
+          </ul>
+
+          <ul>
+            <li (click)="navigate('newsroom')">
+              <p>
+                <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>Diversidade,
+                equidade e inclusão
+              </p>
+            </li>
+            <li (click)="navigate('newsroom')">
+              <p><i class="bi bi-arrow-right">&nbsp;&nbsp;</i>Bem-estar</p>
+            </li>
+            <li (click)="navigate('newsroom')">
+              <p>
+                <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>Rede de ex-alunos
+              </p>
+            </li>
+            <li (click)="navigate('newsroom')">
+              <p><i class="bi bi-arrow-right">&nbsp;&nbsp;</i>Escritórios</p>
+            </li>
+          </ul>
+
+          <ul>
+            <li (click)="navigate('newsroom')">
+              <p><i class="bi bi-arrow-right">&nbsp;&nbsp;</i>Inovação legal</p>
+            </li>
+            <li (click)="navigate('newsroom')">
+              <p>
+                <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>Informações para
+                fornecedores
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      } @if (hoveredItem === 'escritorio') {
+      <div class="details-content-2">
+        <h1>O Escritório</h1>
+        <div class="grid-list">
+          <ul>
+            <li>
+              <button class="btn-nav" (click)="navigate('newsroom')" >
+                <p>
+                  <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>
+                  Quem somos
+                </p>
+              </button>
+            </li>
+            <li>
+              <button class="btn-nav" (click)="navigate('newsroom')">
+                <p>
+                  <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>
+                  Uma abordagem
+                </p>
+              </button>
+            </li>
+            <li>
+              <button class="btn-nav" (click)="navigate('newsroom')">
+                <p>
+                  <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>
+                  >Um time sem fronteiras
+                </p>
+              </button>
+            </li>
+            <li>
+              <button class="btn-nav" (click)="navigate('newsroom')">
+                <p>
+                  <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>
+                  Ai-powered
+                </p>
+              </button>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <button class="btn-nav" (click)="navigate('newsroom')">
+                <p>
+                  <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>
+                  Diversidade, equidade e inclusão para além da retórica
+                </p>
+              </button>
+            </li>
+            <li>
+              <button class="btn-nav" (click)="navigate('newsroom')">
+                <p>
+                  <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>
+                  Sustentabilidade na prática
+                </p>
+              </button>
+            </li>
+            <li>
+              <button class="btn-nav" (click)="navigate('newsroom')">
+                <p>
+                  <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>
+                  Compromisso com a responsabilidade social e pro bono
+                </p>
+              </button>
+            </li>
+            <li>
+              <button class="btn-nav" (click)="navigate('newsroom')">
+                <p>
+                  <i class="bi bi-arrow-right">&nbsp;&nbsp;</i>
+                  Empoderamento e desenvolvimento profissional
+                </p>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  } @if (isExpanded) {
+  <div class="back"></div>
+  }
 </div>
-<!-- @if (isExpanded) {
-<div class="back"></div>
-} -->
