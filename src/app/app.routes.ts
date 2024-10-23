@@ -5,6 +5,7 @@ import { CareersComponent } from './pages/careers/careers.component';
 import { NewsroomComponent } from './pages/newsroom/newsroom.component';
 import { OfficeComponent } from './pages/office/office.component';
 import { PerformanceComponent } from './pages/performance/performance.component';
+import { PeopleDetailComponent } from './pages/people-detail/people-detail.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,4 +15,5 @@ export const routes: Routes = [
   { path: 'newsroom', component: NewsroomComponent },
   { path: 'office', component: OfficeComponent },
   { path: 'performance', component: PerformanceComponent },
+  {path:'people-detail',component:PeopleDetailComponent}
 ];

@@ -15,6 +15,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { map, Observable, startWith } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-people-search',
   standalone: true,
@@ -53,18 +54,65 @@ export class PeopleSearchComponent {
   value = '';
   people: any = [
     {
-      src: 'assets/mask.png',
-      name: 'Edna Mode',
+      src: 'assets/mask-2.png',
+      name: 'Alexandre Calmon',
       position: 'Sócia Diretora',
-      email:'ednamode@cosro.com',
-      phone:'+55 11 0000.0000',
-      office:'Belfast',
-    }
+      email: 'ednamode@cosro.com',
+      phone: '+55 11 0000.0000',
+      office: 'Belfast',
+      path: 'people-detail',
+    },
+    {
+      src: 'assets/mask-3.png',
+      name: 'Bruna Rocha',
+      position: 'Sócia Diretora',
+      email: 'ednamode@cosro.com',
+      phone: '+55 11 0000.0000',
+      office: 'Belfast',
+      path: 'people-detail',
+    },
+    {
+      src: 'assets/mask-1.png',
+      name: 'Isabela Morbach',
+      position: 'Sócia Diretora',
+      email: 'ednamode@cosro.com',
+      phone: '+55 11 0000.0000',
+      office: 'Belfast',
+      path: 'people-detail',
+    },
+    {
+      src: 'assets/mask-4.png',
+      name: 'João Marçal',
+      position: 'Sócia Diretora',
+      email: 'ednamode@cosro.com',
+      phone: '+55 11 0000.0000',
+      office: 'Belfast',
+      path: 'people-detail',
+    },
+    {
+      src: 'assets/mask-5.png',
+      name: 'Marcelo Frazão',
+      position: 'Sócia Diretora',
+      email: 'ednamode@cosro.com',
+      phone: '+55 11 0000.0000',
+      office: 'Belfast',
+      path: 'people-detail',
+    },
+    {
+      src: 'assets/mask-6.png',
+      name: 'Vilmar Luiz Graça Gonçalves',
+      position: 'Sócia Diretora',
+      email: 'ednamode@cosro.com',
+      phone: '+55 11 0000.0000',
+      office: 'Belfast',
+      path: 'people-detail',
+    },
   ];
   myControl = new FormControl('');
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions: Observable<string[]> | undefined;
 
+  constructor(private router: Router) {}
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
@@ -78,5 +126,9 @@ export class PeopleSearchComponent {
     return this.options.filter((option) =>
       option.toLowerCase().includes(filterValue)
     );
+  }
+
+  navigate(path: string) {
+    this.router.navigate(['/', path]);
   }
 }

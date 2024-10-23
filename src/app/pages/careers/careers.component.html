@@ -1,58 +1,47 @@
-<div id="select" class="select">
-    <h1>Carrers</h1>
-    <mat-form-field>
-        <mat-select [(value)]="selected">
-            @for (place of place; track $index) {
-            <mat-option [value]="place.value">{{place.viewValue}}</mat-option>
-            }
-        </mat-select>
-    </mat-form-field>
-</div>
-
-<div id="search" class="search">
-    <img src="assets/image-18.webp" alt="">
-    <button>
-        Search roles and apply
-        <i class="bi bi-arrow-right arrow-icon"></i>
-    </button>
-</div>
-
-<div id="discover" class="discover">
+<div class="introduction">
+    <img src="../../../assets/friendship_02.png" alt="">
     <div class="text">
-        <h1>Discover what it means to belong and excel at A&O Shearman</h1>
+        <h1>
+            Descubra o que significa pertencer e
+            se destacar no Costa Rodrigues Advogados
+        </h1>
         <p>
-            We're at the start of an exciting journey as a new industry-leading global law firm, and this offers great
-            opportunities for our people. Whether you're helping clients solve complex challenges, transforming the ways
-            we manage our business, or ensuring the smooth-running of our operations, this is an environment where you
-            can belong and excel - whether you’re starting out, or taking the next step in your career.
+            O Costa Rodrigues foi formado em 2024 através da parceria
+            entre advogados com uma nova forma de visualizar
+            futuro da advocacia, kcmidcic snis sdnhbwd bxndn sbcxh xhb.
         </p>
-
-        <p> Together, we achieve unparalleled outcomes for our clients and for each other.</p>
     </div>
-
-    <img src="assets/image-19.webp" alt="">
+    <p>
+        You are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
+        the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
+        necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,
+        combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The
+        generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words
+        etc.
+    </p>
 </div>
 
+<div class="facts">
 
-<div id="facts" class="facts">
+   <div class="title">
     <h1>
-        Key facts <br>and figures
+        Fatos e números-chave
     </h1>
+   </div>
 
-    <div class="grid">
-
+    <div class="list">
         @for (item of [].constructor(6); track $index) {
         <div class="cards">
             <div class="line"></div>
-            <h2>Third largest integrated law firm</h2>
+            <h2>Alcance global</h2>
             <p>
-                Nearly 4,000 lawyers combined,
-                including 800 partners,
-                across 47 offices and 29 countries globally.
+                The generated Lorem Ipsum is therefore always free from repetition, injected humour, or
+                non-characteristic words etc.
             </p>
         </div>
         }
     </div>
+
 </div>
 
 

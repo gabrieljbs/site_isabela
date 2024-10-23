@@ -58,7 +58,7 @@
 
     <div class="grid">
         @for (item of people; track $index){
-        <div class="profile-card">
+        <div class="profile-card" (click)="navigate(item.path)">
             <img [src]="item.src" alt="" class="profile-img" />
             <div class="data">
                 <h2>{{ item.name }}</h2>

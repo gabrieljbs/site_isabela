@@ -1,109 +1,186 @@
 <footer>
-    <div class="top">
-        <p>
-            It has survived not only five centuries,
-            but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-        </p>
-
-        <button class="contact-btn"> CONTATO</button>
-    </div>
-
+  <div class="top">
     <div class="list">
-        <p>
-            Notificação de privacidade
-        </p>
-        <p>|</p>
-        <p>
-            Acessibilidade
-
-        </p>
-        <p>|</p>
-        <p>
-            Recuperação de Desastres
-        </p>
-        <p>|</p>
-        <p>
-            Avisos Legais
-        </p>
-        <p>|</p>
-        <p>
-            Declaração de Escravidão Anti-Moderna
-        </p>
+      <p>Anticorrupção</p>
+      <p>|</p>
+      <p>Confidencialidade</p>
+      <p>|</p>
+      <p>Ética e Conduta</p>
+      <p>|</p>
+      <p>Dados para Privacidade</p>
+      <p>|</p>
+      <p>Acessibilidade</p>
     </div>
+  </div>
 
-    <div id='container' class="container">
-        <ul>
-            <h5>SERVICES</h5>
-            @for (item of expertise.expertise; track $index) {
-            <li>
-                <button (click)="navigate(item.path,'Expertise')">
-                    <p>{{item.name}}</p>
-                </button>
-            </li>
-            }
-        </ul>
-        <ul>
-            <h5>GLOBAL COVERAGE</h5>
+  <div id="container" class="container">
+    <ul>
+      <h5>Atuação</h5>
 
-            @for (item of globalCoverage.continents; track $index) {
-            <li>
-                <button (click)="navigate(item.path,'Global Coverage')">
-                    <p>{{item.name}}</p>
-                </button>
-            </li>
-            }
-        </ul>
-        <ul>
-            <h5>FIRM</h5>
-            <li>
-                <button (click)="navigate('careers','')">
-                    <p>About us</p>
-                </button>
-            </li>
-            <li>
-                <button (click)="navigate('careers','')">
-                    <p>Careers</p>
-                </button>
-            </li>
-            <li>
-                <button (click)="navigate('careers','')">
-                    <p>Contact us</p>
-                </button>
-            </li>
-            <li>
-                <button (click)="navigate('careers','')">
-                    <p>Knowledge resources</p>
-                </button>
-            </li>
-            <li>
-                <button (click)="navigate('careers','')">
-                    <p>People</p>
-                </button>
-            </li>
-        </ul>
+      <li>
+        <button>
+          <p>Agronegócio</p>
+        </button>
+      </li>
 
-        <div id="social" class="social">
-            <ul>
-                <h5>SOCIAL</h5>
-                <p>
-                    <i class="bi bi-linkedin"></i>
-                    <a href="">LINKEDIN</a>
-                </p>
-            </ul>
-        </div>
-    </div>
+      <li>
+        <button>
+          <p>Alimentos e Bebidas</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Bens de Consumo e Varejo</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Cannabis</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Descarbonização</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Energia</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Esportes</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Imobiliário</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Infraestrutura</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Life Sciences e Healthcare</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Mineração</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Navegação</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Tecnologia</p>
+        </button>
+      </li>
+    </ul>
 
-    <div class="bottom">
-        <img src="../../../assets/Logo_01.png" alt="">
-        <ul>
-            <li>Accessibility</li>
-            <li>Cookie policy</li>
-            <li>Privacy policy</li>
-            <li>Legal notices</li>
-        </ul>
-        <p>
-            © 2024 A&O Costa Rodrigues
-        </p>
-    </div>
+    <ul>
+      <h5>Presença</h5>
+      <li>
+        <button>
+          <p>Brasília</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>São Paulo</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Rio de Janeiro</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Madrid</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Nova Iorque</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Roma</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Singapura</p>
+        </button>
+      </li>
+    </ul>
+    <ul>
+      <h5>Escritorio</h5>
+      <li>
+        <button>
+          <p>Quem somos</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Diversidade, Equidade e Inclusão</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Responsabilidade Social e Pro bono</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Sustentabilidade</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Insights</p>
+        </button>
+      </li>
+      <li>
+        <button>
+          <p>Carreira</p>
+        </button>
+      </li>
+    </ul>
+
+    <ul>
+      <h5>Carreira</h5>
+      <li>
+        <button>
+          <p>Contato</p>
+        </button>
+      </li>
+    </ul>
+    <ul>
+      <h5>Conect e-se</h5>
+      <p>
+        <i class="bi bi-linkedin"></i>
+        <a href="">LINKEDIN</a>
+      </p>
+      <p>
+        <i class="bi bi-linkedin"></i>
+        <a href="">Instagran</a>
+      </p>
+    </ul>
+  </div>
+
+  <div class="bottom">
+    <img src="../../../assets/Logo_01.png" alt="" />
+   
+    <p>© 2024 A&O Costa Rodrigues</p>
+  </div>
 </footer>
