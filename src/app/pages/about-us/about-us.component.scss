@@ -1,0 +1,100 @@
+.content {
+    .introduction {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 5rem;
+
+        .title {
+            display: flex;
+            flex-direction: row;
+            margin-left: 5rem;
+        }
+
+        h4 {
+            color: #035151;
+            font-size: 96px;
+            line-height: 85px;
+            font-weight: 300;
+            margin-top: 3rem;
+        }
+
+        p {
+            font-size: 32px;
+            border-top: #035151 solid 2px;
+            color: #035151;
+            line-height: 35px;
+            padding-top: 2rem;
+            width: 40vw;
+        }
+    }
+
+    .about-us {
+        display: flex;
+        flex-direction: row;
+
+        p {
+            font-size: 28px;
+            color: #035151;
+            width: 60vw;
+            height: 51.7vh;
+            line-height: 40px;
+            border-left: #035151 solid 10px;
+            padding-left: 5rem;
+            padding-top: 5rem;
+        }
+    }
+
+
+    .colab {
+        background-color: #035151;
+        padding-bottom: 5rem;
+
+        .introduction{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .title-text{
+                width: 50vw;
+            }
+        }
+        h1 {
+            font-size: 86px;
+            color: #FFF;
+            line-height: 85px
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #FFF;
+            line-height: 30px;
+            font-weight: 100;
+            margin-top: 5rem;
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                color: #FFF;
+                font-size: 22px;
+                margin: auto;
+                width: 60vw;
+                line-height: 50px;
+                margin-top: 5rem;
+            }
+
+        }
+
+        .img-border {
+            position: relative  ;
+            left: 75%;
+            bottom: 100%;
+        }
+    }
+}
