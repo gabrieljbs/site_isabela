@@ -7,8 +7,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { Router } from '@angular/router';
-import { ExpertiseServiceService } from '../../services/ExpertiseService/expertise-service.service';
-
 @Component({
   selector: 'app-performance',
   standalone: true,
@@ -38,9 +36,7 @@ export class PerformanceComponent {
   items: any;
   constructor(
     private router: Router,
-    private expertiseService: ExpertiseServiceService
   ) {
-    this.items = this.expertiseService.getData();
   }
   naviagete(path: string) {
     this.router.navigate(['/expertise/', path]);

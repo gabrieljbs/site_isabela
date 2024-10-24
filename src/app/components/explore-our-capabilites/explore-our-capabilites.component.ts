@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ExpertiseServiceService } from '../../services/ExpertiseService/expertise-service.service';
-
 @Component({
   selector: 'app-explore-our-capabilites',
   standalone: true,
@@ -13,9 +11,8 @@ export class ExploreOurCapabilitesComponent {
   items: any;
   constructor(
     private router: Router,
-    private expertiseService: ExpertiseServiceService
+   
   ) {
-    this.items = this.expertiseService.getData();
   }
   naviagete(path: string) {
     this.router.navigate(['/expertise/', path]);
