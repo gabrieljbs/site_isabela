@@ -6,10 +6,10 @@
 @for (item of pessoa; track $index) {
 <div class="content">
   <div class="info">
-    <img [src]="item.img" alt="" style="height: 500px" />
+    <img [src]="item.img" alt="" height="500px" width="100%"/>
     <div class="data">
       <div>
-        <h1>{{ item.nome }}</h1>
+        <h1 class="arapey-regular">{{ item.nome }}</h1>
       </div>
 
       <div class="partner">
@@ -26,7 +26,7 @@
         <p><i class="bi bi-download"></i> Cartão de Visitas</p>
       </button>
       <div class="rankings">
-        <h4>Rankings</h4>
+        <h4 class="arapey-regular">Rankings</h4>
 
         <p>{{ item.ranking1 }}</p>
         <p>{{ item.ranking2 }}</p>
@@ -37,48 +37,49 @@
       </div>
 
       <div class="languages">
-        <h4>Idiomas</h4>
+        <h4 class="arapey-regular">Idiomas</h4>
         <p>{{ item.idiomas }}</p>
       </div>
     </div>
     <div class="conect">
       <button>
-        <p><i class="bi bi-linkedin"></i> Conecte-se</p>
+        <p class="arimo-regula"><i class="bi bi-linkedin"></i> Conecte-se</p>
       </button>
     </div>
   </div>
 
   <div class="main">
     <div class="introduction">
-      <h4>
+      <h4 class="arapey-regular">
         {{ item.apresentacao1 }}
       </h4>
-      <p>
+      <p class="arimo-regular">
         {{ item.apresentacao2 }}
       </p>
     </div>
 
     <div class="experience">
-      <h4>Experiência</h4>
-      <p>
+      <h4 class="arapey-regular">Experiência</h4>
+      <p class="arimo-regular">
         {{ item.experiencia }}
       </p>
     </div>
 
     <div class="specialties">
-      <h4>Especialidades</h4>
+      <h4 class="arapey-regular">Especialidades</h4>
 
       <div class="sector">
-        <h3>Setores:</h3>
+        <h3 class="arimo-regular">Setores:</h3>
 
         <div class="tags">
-          <div class="tag" style="background-color: #39e2af8a">
+          <div class="tag arimo-regula" style="background-color: #39e2af8a">
             {{ item.setores1 }}
           </div>
-          <div class="tag">{{ item.setores2 }}</div>
-          <div class="tag">{{ item.setores3 }}</div>
-          <div class="tag">{{ item.setores4 }}</div>
-          <div class="tag">{{ item.setores5 }}</div>
+          <div class="tag arimo-regular">{{ item.setores2 }}</div>
+          <div class="tag arimo-regular">{{ item.setores3 }}</div>
+          <div class="tag arimo-regular">{{ item.setores4 }}</div>
+          <div class="tag arimo-regular">{{ item.setores5 }}</div>
+          <div class="tag arimo-regular">{{ item.setores6 }}</div>
         </div>
       </div>
 
@@ -89,33 +90,31 @@
           <div class="tag" style="background-color: #39e2af8a">
             Contratos Comerciais
           </div>
-          <div class="tag">{{ item.pratica1 }}</div>
-          <div class="tag">{{ item.pratica2 }}</div>
-          <div class="tag">{{ item.pratica3 }}</div>
-          <div class="tag">{{ item.pratica4 }}</div>
-          <div class="tag">{{ item.pratica5 }}</div>
-          <div class="tag">{{ item.pratica6 }}</div>
-          <div class="tag">{{ item.pratica7 }}</div>
-          <div class="tag">{{ item.pratica8 }}</div>
-          <div class="tag">{{ item.pratica9 }}</div>
+          <div class="tag arimo-regula">{{ item.pratica1 }}</div>
+          <div class="tag arimo-regula">{{ item.pratica2 }}</div>
+          <div class="tag arimo-regula">{{ item.pratica3 }}</div>
+          <div class="tag arimo-regula">{{ item.pratica4 }}</div>
+          <div class="tag arimo-regula">{{ item.pratica5 }}</div>
+          <div class="tag arimo-regula">{{ item.pratica6 }}</div>
+          <div class="tag arimo-regula">{{ item.pratica7 }}</div>
+          <div class="tag arimo-regula">{{ item.pratica8 }}</div>
+          <div class="tag arimo-regula">{{ item.pratica9 }}</div>
         </div>
       </div>
     </div>
 
     <div class="qualifications">
-      <h4>Qualificações</h4>
+      <h4 class="arapey-regular">Qualificações</h4>
 
-      <p>{{item.qualificacao}}</p>
-     
+      <p class="arimo-regula">{{ item.qualificacao }}</p>
     </div>
 
     <div class="alliances-and-associations">
-      <h3>Membro da:</h3>
+      <h3 class="class arimo-regula">Membro da:</h3>
 
-      <p>
-       {{item.aliancas}}
+      <p class="arimo-regula">
+        {{ item.aliancas }}
       </p>
-     
     </div>
   </div>
 </div>

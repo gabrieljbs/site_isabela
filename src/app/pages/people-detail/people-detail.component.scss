@@ -7,6 +7,9 @@
     margin-top: 7rem;
     margin-bottom: 7rem;
 }
+.rankings{
+    padding: 0 1rem;
+}
 
 h4 {
     color: #035151;
@@ -31,13 +34,13 @@ p {
 .info {
     background-color: #035151;
     height: 80%;
-
     .data {
         padding-left: 2rem;
         padding-top: 2rem;
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        width: 400px;
     }
 
     p {
