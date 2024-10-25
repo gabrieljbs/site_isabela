@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { BtnNavComponent } from '../btn-nav/btn-nav.component';
-import { TitleLinkComponent } from '../title-link/title-link.component';
 import { ToggleComponent } from '../toggle/toggle.component';
 
 import { inject, TemplateRef } from '@angular/core';
@@ -14,11 +13,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [
-    BtnNavComponent,
-    TitleLinkComponent,
-    ToggleComponent,
-  ],
+  imports: [BtnNavComponent,ToggleComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
