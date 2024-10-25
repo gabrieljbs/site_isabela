@@ -32,6 +32,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatAutocompleteModule,
     AsyncPipe,
     MatPaginatorModule,
+    SearchComponent
   ],
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss',

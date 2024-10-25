@@ -1,0 +1,115 @@
+<div class="bar">
+  <div class="container">
+    <div class="row justify-content-center align-items-center gy-5">
+      <div class="col-sm-5 text-center">
+        <img
+          src="assets/logo.png"
+          alt="logo"
+          width="371"
+          height="67"
+          (click)="navigate('home')"
+        />
+      </div>
+
+      <div class="col-sm-5 text-center">
+        <ul class="lista d-flex justify-content-center">
+          <li>
+            <div class="title arimo-regular" (click)="openModalXl(content)">
+              Pessoas
+            </div>
+          </li>
+          <li>
+            <div
+              class="title arimo-regular"
+              (click)="openModalXl(contentOffice)"
+            >
+              O escritório
+            </div>
+          </li>
+
+          <li>
+            <div class="title arimo-regular">Atuação</div>
+          </li>
+          <li>
+            <div class="title arimo-regular">Insigths</div>
+          </li>
+          <li>
+            <div class="title arimo-regular">Carreira</div>
+          </li>
+        </ul>
+      </div>
+
+      <!--  <div class="col-sm-1 text-center">
+          <app-toggle></app-toggle>
+        </div> -->
+
+      <div class="col-sm-2 text-center">
+        <button class="btn-nav">
+          <p><i class="bi bi-search"></i></p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="height: 142px; width: 100%;"></div>
+<!-- Modal de pessoas-->
+
+<ng-template #content let-modal>
+  <div class="line"></div>
+  <div class="content">
+    @for (item of arrayPessoas; track $index) {
+    <div>
+      <div class="modal-header">
+        <h1 class="arapey-regular">
+          {{ item.title }}
+        </h1>
+      </div>
+      <div class="modal-body">
+        @for (opcao of item.opcao; track $index) {
+        <ul>
+          <li class="label arimo-regular col" (click)="navigate(opcao.path)">
+            <i class="bi bi-arrow-right"></i>
+            <b>
+              {{ opcao.label }}
+            </b>
+          </li>
+          @if(opcao.text !== ''){
+          <li class="text arimo-regula col">
+            {{ opcao.text }}
+          </li>
+          }
+        </ul>
+        }
+      </div>
+    </div>
+    }
+  </div>
+</ng-template>
+
+<!-- Modal do escritorio -->
+<ng-template #contentOffice let-modal>
+  <div class="line"></div>
+  <div class="content">
+    @for (item of arrayOffice; track $index) {
+    <div>
+      <div class="modal-header">
+        <h1 class="arapey-regular">
+          {{ item.title }}
+        </h1>
+      </div>
+      <div class="modal-body">
+        <ul class="grid-list" style="padding-left: 3rem">
+          @for (opcao of item.opcao; track $index) {
+          <li class="list-office arimo-regular col-5">
+            <i class="bi bi-arrow-right"></i>
+            <b>
+              {{ opcao.label }}
+            </b>
+          </li>
+          }
+        </ul>
+      </div>
+    </div>
+    }
+  </div>
+</ng-template>
