@@ -1,19 +1,44 @@
-<div id="search" class="search">
-    <form action="">
+<div class="container">
+  <div id="search" class="search row">
+    <div class="col-sm-12">
+      <form action="" class="">
         <mat-form-field class="form-field">
-            <input matInput type="text" [(ngModel)]="value" [placeholder]="placeholder" matInput
-                [formControl]="myControl" [matAutocomplete]="auto">
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="value"
+            [placeholder]="placeholder"
+            matInput
+            [formControl]="myControl"
+            [matAutocomplete]="auto"
+          />
 
-            @if (value) {
-            <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                <mat-icon>close</mat-icon>
-            </button>
+          @if (value) {
+          <button
+            matSuffix
+            mat-icon-button
+            aria-label="Clear"
+            (click)="value = ''"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+          } @if (!value) {
+          <button
+            matSuffix
+            mat-icon-button
+            aria-label="Clear"
+            (click)="value = ''"
+          >
+            <mat-icon>search</mat-icon>
+          </button>
+          }
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            @for (option of filteredOptions | async; track option) {
+            <mat-option [value]="option">{{ option }}</mat-option>
             }
-            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                @for (option of filteredOptions | async; track option) {
-                <mat-option [value]="option">{{option}}</mat-option>
-                }
-            </mat-autocomplete>
+          </mat-autocomplete>
         </mat-form-field>
-    </form>
+      </form>
+    </div>
+  </div>
 </div>
