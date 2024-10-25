@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { BtnNavComponent } from '../btn-nav/btn-nav.component';
 import { TitleLinkComponent } from '../title-link/title-link.component';
 import { ToggleComponent } from '../toggle/toggle.component';
-import { ModalNavComponent } from '../modal-nav/modal-nav.component';
+
 import { inject, TemplateRef } from '@angular/core';
 
 import {
@@ -18,7 +18,6 @@ import { Router } from '@angular/router';
     BtnNavComponent,
     TitleLinkComponent,
     ToggleComponent,
-    ModalNavComponent,
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
@@ -91,6 +90,6 @@ export class NavbarComponent {
 
   navigate(path: string) {
     this.router.navigate(['/', path]);
-    console.log("path");
+    console.log(path);
   }
 }
