@@ -17,41 +17,35 @@
   <div class="container">
     <div id="select" class="select row justify-content-center gx-4">
       <div class="col-sm-4">
-        <mat-form-field>
-          <mat-label>Expertise</mat-label>
-          <mat-select [formControl]="toppings" multiple>
-            @for (topping of toppingList; track topping) {
-            <mat-option [value]="topping">{{ topping }}</mat-option>
-            }
-          </mat-select>
-        </mat-form-field>
+        <select aria-label="Default select example">
+          <option selected>Expertise</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
 
       <div class="col-sm-4">
-        <mat-form-field>
-          <mat-label>Industries</mat-label>
-          <mat-select [formControl]="toppings" multiple>
-            @for (topping of toppingList; track topping) {
-            <mat-option [value]="topping">{{ topping }}</mat-option>
-            }
-          </mat-select>
-        </mat-form-field>
+        <select aria-label="Default select example">
+          <option selected>Industry</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
 
       <div class="col-sm-4">
-        <mat-form-field>
-          <mat-label>Location</mat-label>
-          <mat-select [formControl]="toppings" multiple>
-            @for (topping of toppingList; track topping) {
-            <mat-option [value]="topping">{{ topping }}</mat-option>
-            }
-          </mat-select>
-        </mat-form-field>
+        <select aria-label="Default select example">
+          <option selected>Location</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
     </div>
   </div>
 
-  <div class="container">
+  <div class="container" style="margin-bottom: 2rem;">
     <div class="row justify-content-center align-items-center gy-5">
       @for (item of dados; track $index){
       <div class="col-sm-4">
@@ -60,13 +54,13 @@
             <img [src]="item.img" alt="" class="profile-img" />
 
             <div class="data col">
-              <h2 class="row">{{ item.nome }}</h2>
+              <h2 class="row arapey-regular text-start">{{ item.nome }}</h2>
               <h3 class="row">{{ item.cargo }}</h3>
 
               <div class="value-column row">
-                <p>{{ item.email }}</p>
-                <p>{{ item.telefone1 }}</p>
-                <p>{{ item.escritori2 }}</p>
+                <h4 class="arimo-regular" style="text-decoration: underline;">{{ item.email }}</h4>
+                <h4  class="arimo-regular">{{ item.telefone1 }}</h4>
+                <h4  class="arimo-regular">{{ item.escritori2 }}</h4>
               </div>
 
               <button class="v-card">

@@ -1,7 +1,21 @@
-.select {
-  mat-form-field {
-    width: 400px;
-    padding: 0;
+select {
+  cursor: pointer;
+  border: 50px;
+  width: 400px;
+  padding: 0;
+  border-bottom: 2px solid #505050;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  border-radius: none;
+  box-shadow: none;
+  color: #035151;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  option{
+    text-transform: uppercase;
+    font-weight: 600;
   }
 }
 
@@ -62,13 +76,12 @@ h1 {
 .profile-img {
   width: 100%;
   height: 400px;
-  aspect-ratio: 3 / 4;
-  object-fit: fill;
+  object-fit: inherit;
   border-bottom: 1px solid #ddd;
 }
 
 .data {
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   margin: 0;
   margin-top: 2rem;
   text-align: start;
@@ -79,6 +92,7 @@ h2 {
   font-size: 48px;
   font-weight: 400;
   line-height: 55px;
+
 }
 
 h3 {
@@ -105,8 +119,12 @@ h3 {
 
 .value-column {
   color: #fff;
-  font-size: 16px;
+
   font-weight: 500;
+
+  h4 {
+    font-size: 22px !important;
+  }
 }
 
 .v-card {
