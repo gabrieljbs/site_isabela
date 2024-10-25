@@ -1,34 +1,22 @@
-.search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: none;
-  width: 100vw;
-  height: 20vh;
-
-  .form-field {
-    width: 80vw;
-
-    input {
-      font-size: 42px;
-      font-weight: 500;
-      color: #fff;
-      font-family: "Montserrat", sans-serif;
-    }
+.select {
+  mat-form-field {
+    width: 400px;
+    padding: 0;
   }
 }
 
-.select {
+.letters {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-
-  mat-form-field {
-    width: 26vw;
-
-  }
+  color: #035151;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 0 1rem 2rem;
 }
 
 .people {
@@ -49,12 +37,12 @@
   margin-top: 2rem;
 }
 
-.people h1 {
-  align-self: start;
+h1 {
   font-size: 96px;
   color: #035151;
-  font-weight: 500;
-  font-style: italic;
+  font-weight: 400;
+  margin: 2rem 0;
+
 }
 
 .grid {
@@ -67,6 +55,7 @@
   background-color: #035151;
   max-height: 800px;
   min-height: 800px;
+  width: 400px;
   padding: 0;
 }
 
@@ -96,6 +85,9 @@ h3 {
   font-size: 16px;
   font-weight: 600;
   color: #39e2b0;
+  width: 200px;
+  border-top: #39e2b0 solid 2px;
+  padding-top: 1rem;
 
 }
 
@@ -125,7 +117,7 @@ h3 {
   background: none;
   border-radius: 50px;
   border: solid 1px #FE6E5B;
-  width: 7vw;
+  width: 200px;
 
   p {
     margin: auto;

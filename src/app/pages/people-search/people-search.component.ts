@@ -17,6 +17,7 @@ import { AsyncPipe } from '@angular/common';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { Router } from '@angular/router';
 import { DataService } from '../../services/dataServices/data.service';
+import { SearchComponent } from '../../components/search/search.component';
 @Component({
   selector: 'app-people-search',
   standalone: true,
@@ -34,6 +35,7 @@ import { DataService } from '../../services/dataServices/data.service';
     MatAutocompleteModule,
     AsyncPipe,
     MatPaginatorModule,
+    SearchComponent,
   ],
   templateUrl: './people-search.component.html',
   styleUrl: './people-search.component.scss',
@@ -45,18 +47,40 @@ export class PeopleSearchComponent {
   toppings = new FormControl('');
   placeholder = 'Procure pelo nome, expertise or indústria';
   toppingList: string[] = [
-    'Extra cheese',
-    'Mushroom',
-    'Onion',
-    'Pepperoni',
-    'Sausage',
-    'Tomato',
+   "All"
   ];
   value = '';
   myControl = new FormControl('');
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions: Observable<string[]> | undefined;
   dados: any[] = [];
+  letters: any = [
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'q',
+    'r',
+    's',
+    't',
+    'u',
+    'v',
+    'x',
+    'y',
+    'z',
+  ];
   constructor(private router: Router, private dadosService: DataService) {}
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges.pipe(
@@ -84,7 +108,7 @@ export class PeopleSearchComponent {
     );
   }
 
-  navigate(path: string, id:number) {
-    this.router.navigate(['/',path], { state: { id: id } });
+  navigate(path: string, id: number) {
+    this.router.navigate(['/', path], { state: { id: id } });
   }
 }
