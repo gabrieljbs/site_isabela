@@ -1,6 +1,6 @@
 <div class="bar">
   <div class="container">
-    <div class="row justify-content-center align-items-center gy-5">
+    <div class="row justify-content-between align-items-center">
       <div class="col-sm-5 text-center">
         <img
           src="assets/logo.png"
@@ -28,22 +28,31 @@
           </li>
 
           <li>
-            <div class="title arimo-regular">Atuação</div>
+            <div
+              class="title arimo-regular"
+              (click)="openModalXl(contentAtuacao)"
+            >
+              Atuação
+            </div>
           </li>
           <li>
-            <div class="title arimo-regular" (click)="navigate('insights')">Insigths</div>
+            <div class="title arimo-regular" (click)="navigate('insights')">
+              Insigths
+            </div>
           </li>
           <li>
-            <div class="title arimo-regular">Carreira</div>
+            <div class="title arimo-regular" (click)="navigate('careers')">
+              Carreira
+            </div>
           </li>
         </ul>
       </div>
 
       <!--  <div class="col-sm-1 text-center">
-          <app-toggle></app-toggle>
-        </div> -->
+        <app-toggle></app-toggle>
+      </div> -->
 
-      <div class="col-sm-2 text-center">
+      <div class="col-sm-1 text-center">
         <button class="btn-nav">
           <p><i class="bi bi-search"></i></p>
         </button>
@@ -51,14 +60,16 @@
     </div>
   </div>
 </div>
-<div style="height: 142px; width: 100%;"></div>
+
+<div style="height: 142px; width: 100%"></div>
+
 <!-- Modal de pessoas-->
 
-<ng-template #content let-modal>
+<ng-template #content>
   <div class="line"></div>
   <div class="content">
     @for (item of arrayPessoas; track $index) {
-    <div>
+    <div style="margin-left: 12%;">
       <div class="modal-header">
         <h1 class="arapey-regular">
           {{ item.title }}
@@ -91,7 +102,7 @@
   <div class="line"></div>
   <div class="content">
     @for (item of arrayOffice; track $index) {
-    <div>
+    <div style="margin-left: 12%;">
       <div class="modal-header">
         <h1 class="arapey-regular">
           {{ item.title }}
@@ -108,6 +119,56 @@
           </li>
           }
         </ul>
+      </div>
+    </div>
+    }
+  </div>
+</ng-template>
+
+<!-- Modal do atuação -->
+<ng-template #contentAtuacao let-modal>
+  <div class="line"></div>
+  <div class="content">
+    @for (item of arrayAtuacao; track $index) {
+    <div style="margin-left: 12%;">
+      <div class="modal-header">
+        <h1 class="arapey-regular">
+          {{ item.title }}
+        </h1>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <ul class="col-4" style="padding-left: 3rem">
+            @for (opcao of item.opcao; track $index) {
+            <li class="list-office arimo-regular col">
+              <i class="bi bi-arrow-right"></i>
+              <b>
+                {{ opcao.label }}
+              </b>
+            </li>
+            }
+          </ul>
+          <ul class="col-4" style="padding-left: 3rem">
+            @for (opcao of item.opcao2; track $index) {
+            <li class="list-office arimo-regular col">
+              <i class="bi bi-arrow-right"></i>
+              <b>
+                {{ opcao.label }}
+              </b>
+            </li>
+            }
+          </ul>
+          <ul class="col-4" style="padding-left: 3rem">
+            @for (opcao of item.opcao3; track $index) {
+            <li class="list-office arimo-regular col">
+              <i class="bi bi-arrow-right"></i>
+              <b>
+                {{ opcao.label }}
+              </b>
+            </li>
+            }
+          </ul>
+        </div>
       </div>
     </div>
     }
