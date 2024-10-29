@@ -4,17 +4,14 @@ import { ToggleComponent } from '../toggle/toggle.component';
 
 import { inject, TemplateRef } from '@angular/core';
 
-import {
-  ModalDismissReasons,
-  NgbDatepickerModule,
-  NgbModal,
-} from '@ng-bootstrap/ng-bootstrap';
-import { ActivatedRoute, Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { filter } from 'rxjs';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [BtnNavComponent, ToggleComponent,CommonModule],
+  imports: [BtnNavComponent, ToggleComponent, CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
@@ -22,7 +19,7 @@ export class NavbarComponent {
   items: any = ['Pessoas', 'O escritório', 'Atuação', 'Insights', 'Carreira'];
   data: any = [];
   page: string = '';
-  isActive = true;
+  isActive:any = '';
   arrayPessoas = [
     {
       title: 'Pessoas',
@@ -128,24 +125,34 @@ export class NavbarComponent {
       ],
     },
   ];
-  currentUrl: any = '';
-  constructor(private router: Router) {}
+
+  activeRoute: any = 'people-search';
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+
   private modalService = inject(NgbModal);
 
   openModalXl(content: TemplateRef<any>) {
     this.modalService.open(content, { fullscreen: 'mysize' });
   }
 
+  ngOnInit() {
+    this.isactiveRouter();
+    this.activeRoute = this.router.url.split('/').pop() || ''; // Define a rota ativa inicialmente
+    this.isActive = this.activeRoute; // Inicializa a isActive
+  }
+
   navigate(path: string) {
     this.router.navigate(['/', path]);
-    console.log(path);
     this.modalService.dismissAll();
   }
 
-  ngOnInit(){
-    
+  isactiveRouter() {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.activeRoute = this.router.url.split('/').pop() || '';
+        this.isActive = this.activeRoute; // Atualiza isActive na mudança de rota
+        console.log(this.isActive);
+      });
   }
-
-  
-  
 }

@@ -1,4 +1,9 @@
-<div class="bar">
+<div
+  class="bar"
+  [ngClass]="{
+    'home': isActive === 'home'
+  }"
+>
   <div class="container">
     <div class="row justify-content-between align-items-center">
       <div class="col-sm-5 text-center">
@@ -13,12 +18,20 @@
 
       <div class="col-sm-5 text-center">
         <ul class="lista d-flex justify-content-center">
-          <li>
+          <li
+            [ngClass]="{
+              'active-border': isActive === 'people-search'
+            }"
+          >
             <div class="title arimo-regular" (click)="openModalXl(content)">
               Pessoas
             </div>
           </li>
-          <li>
+          <li
+            [ngClass]="{
+              'active-border': isActive === 'office'
+            }"
+          >
             <div
               class="title arimo-regular"
               (click)="openModalXl(contentOffice)"
@@ -27,7 +40,11 @@
             </div>
           </li>
 
-          <li>
+          <li
+            [ngClass]="{
+              'active-border': isActive === 'atuação'
+            }"
+          >
             <div
               class="title arimo-regular"
               (click)="openModalXl(contentAtuacao)"
@@ -35,12 +52,20 @@
               Atuação
             </div>
           </li>
-          <li>
+          <li
+            [ngClass]="{
+              'active-border': isActive === 'insigths'
+            }"
+          >
             <div class="title arimo-regular" (click)="navigate('insights')">
               Insigths
             </div>
           </li>
-          <li>
+          <li
+            [ngClass]="{
+              'active-border': isActive === 'careers'
+            }"
+          >
             <div class="title arimo-regular" (click)="navigate('careers')">
               Carreira
             </div>
@@ -61,7 +86,9 @@
   </div>
 </div>
 
-<div style="height: 142px; width: 100%"></div>
+<div style="height: 142px; width: 100%" [ngClass]="{
+  'home-back': isActive === 'home'
+}"></div>
 
 <!-- Modal de pessoas-->
 
@@ -69,7 +96,7 @@
   <div class="line"></div>
   <div class="content">
     @for (item of arrayPessoas; track $index) {
-    <div style="margin-left: 12%;">
+    <div style="margin-left: 12%">
       <div class="modal-header">
         <h1 class="arapey-regular">
           {{ item.title }}
@@ -102,7 +129,7 @@
   <div class="line"></div>
   <div class="content">
     @for (item of arrayOffice; track $index) {
-    <div style="margin-left: 12%;">
+    <div style="margin-left: 12%">
       <div class="modal-header">
         <h1 class="arapey-regular">
           {{ item.title }}
@@ -130,7 +157,7 @@
   <div class="line"></div>
   <div class="content">
     @for (item of arrayAtuacao; track $index) {
-    <div style="margin-left: 12%;">
+    <div style="margin-left: 12%">
       <div class="modal-header">
         <h1 class="arapey-regular">
           {{ item.title }}
