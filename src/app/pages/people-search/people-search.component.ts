@@ -18,6 +18,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { Router } from '@angular/router';
 import { DataService } from '../../services/dataServices/data.service';
 import { SearchComponent } from '../../components/search/search.component';
+import { PessoalService } from '../../services/pessoalServices/pessoal-service.service';
 @Component({
   selector: 'app-people-search',
   standalone: true,
@@ -52,6 +53,7 @@ export class PeopleSearchComponent {
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions: Observable<string[]> | undefined;
   dados: any[] = [];
+  result:any[]=[];
   info: any[] = [];
   letters: any = [
     'a',
@@ -80,28 +82,19 @@ export class PeopleSearchComponent {
     'y',
     'z',
   ];
-  constructor(private router: Router, private dadosService: DataService) {}
+  filteredData: any[] = [];
+  constructor(private router: Router, private pessoalService: PessoalService) {}
   async ngOnInit() {
-    await (await this.dadosService.getData('pessoal')).subscribe(res => {
+    await (await this.pessoalService.list()).subscribe(res => {
       console.log(res)
       this.dados = res as any
+      this.result = this.dados
     })
 
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
       map((value) => this._filter(value || ''))
     );
-
-    // this.dadosService.carregarDados().subscribe(
-    //   (dados) => {
-    //     this.dados = dados;
-
-    //     console.log(this.dados);
-    //   },
-    //   (error) => {
-    //     console.error('Erro ao carregar os dados', error);
-    //   }
-    // );
   }
 
   private _filter(value: string): string[] {
@@ -115,4 +108,14 @@ export class PeopleSearchComponent {
   navigate(path: string, id: number) {
     this.router.navigate(['/', path], { state: { id: id } });
   }
+
+  filter(letter:string){
+    const upperLetter = letter.toUpperCase();
+    console.log(upperLetter)
+
+    this.result = this.dados.filter(res=>res.nome.startsWith(upperLetter));
+    console.log(this.result)
+  }
+
+  
 }

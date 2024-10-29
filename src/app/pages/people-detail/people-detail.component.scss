@@ -22,6 +22,7 @@ h3 {
     font-size: 20px;
     color: #505050;
     font-weight: bold;
+
 }
 
 p {
@@ -126,6 +127,9 @@ p {
     gap: 3rem;
 
     .specialties {
+        h3{
+            margin-top: 1rem;
+        }
         .tags {
             display: flex;
             flex-wrap: wrap;
@@ -147,10 +151,11 @@ p {
     }
 
     .qualifications {
+        margin-top: 3rem;
         p {
             font-size: 20px;
             color: #505050;
-            line-height: 25px;
+            line-height: 35px;
             font-weight: 500;
         }
 
