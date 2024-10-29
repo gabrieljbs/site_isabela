@@ -1,44 +1,15 @@
-<div class="container">
-  <div id="search" class="search row">
-    <div class="col-sm-12">
-      <form action="" class="">
-        <mat-form-field class="form-field">
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="value"
-            [placeholder]="placeholder"
-            matInput
-            [formControl]="myControl"
-            [matAutocomplete]="auto"
-          />
+<div class="container mt-5">
+  <div class="input-group">
+    <input
+      type="text"
+      class="form-control arapey-regular"
+      placeholder="Procure pelo nome, expertise ou indústria"
+      aria-label="Buscar"
+    
+    />
 
-          @if (value) {
-          <button
-            matSuffix
-            mat-icon-button
-            aria-label="Clear"
-            (click)="value = ''"
-          >
-            <mat-icon>close</mat-icon>
-          </button>
-          } @if (!value) {
-          <button
-            matSuffix
-            mat-icon-button
-            aria-label="Clear"
-            (click)="value = ''"
-          >
-            <mat-icon>search</mat-icon>
-          </button>
-          }
-          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-            @for (option of filteredOptions | async; track option) {
-            <mat-option [value]="option">{{ option }}</mat-option>
-            }
-          </mat-autocomplete>
-        </mat-form-field>
-      </form>
-    </div>
+    <button class="btn btn-outline-secondary" >
+      <i class="bi bi-search"></i>
+  </button>
   </div>
 </div>

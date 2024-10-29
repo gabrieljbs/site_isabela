@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import {
   NgbCarouselConfig,
@@ -37,7 +37,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss',
 })
-export class SearchComponent {
+export class SearchComponent {  
+  @Output() nomeDevolvido = new EventEmitter<string>();
+
   placeholder = 'Search by name, expertise or industry';
   value = '';
   myControl = new FormControl('');
@@ -48,6 +50,8 @@ export class SearchComponent {
       startWith(''),
       map((value) => this._filter(value || ''))
     );
+
+    console.log(this.value)
   }
 
   private _filter(value: string): string[] {
@@ -56,5 +60,10 @@ export class SearchComponent {
     return this.options.filter((option) =>
       option.toLowerCase().includes(filterValue)
     );
+  }
+
+
+  enviar() {
+    this.nomeDevolvido.emit(this.value); // Emite o nome de volta ao pai
   }
 }

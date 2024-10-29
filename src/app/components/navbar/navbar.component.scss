@@ -1,23 +1,30 @@
+.background-none {
+    background: none;
+}
+
 img {
     cursor: pointer;
 }
-.line{
+
+.line {
     height: 85%;
-    width: 3px;
-    background-color: #FE6E5B;
+    width: 2px;
+    background-color: #FFF;
     position: absolute;
-    left: 8%;
+    left: 15%;
 
 }
+
 .bar {
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 2; 
+    z-index: 2;
     width: 100vw;
     height: 142px;
     background-color: #035151;
+
     i {
         color: #FE6E5B;
         font-size: 26px;
@@ -47,20 +54,16 @@ img {
         color: #FFF;
         width: auto;
         white-space: nowrap;
+
     }
 
 }
 
 .content {
     height: 370px;
-    width: 100%;
+    width: 1400px;
     background: #035151;
-    margin: auto;
     padding: 2rem 0rem 0rem 5.2rem;
-}
-
-.line {
-    margin-top: 0;
 }
 
 .modal-header {
@@ -111,9 +114,4 @@ button {
 
 li {
     cursor: pointer;
-}
-
-.modal-dialog .modal-xl{
-    margin-top: 140px !important;
-
 }

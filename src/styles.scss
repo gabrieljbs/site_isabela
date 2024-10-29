@@ -23,6 +23,10 @@
   font-style: normal;
   font-size: 16px
 }
+
+.modal-fullscreen-mysize-down .modal-content {
+  width: 1400px;
+}
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -79,5 +83,8 @@ body {
 
 
 .modal.show .modal-dialog{
+  margin: auto;
+  display: flex;
+  justify-content: center;
   margin-top: 140px;
 }

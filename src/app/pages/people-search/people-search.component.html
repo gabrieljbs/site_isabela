@@ -6,10 +6,10 @@
 
   <div class="container text-center">
     <div class="letters">
-      @for (item of letters; track $index) { @if ($index !== 0) {
+      @for (letters of letters; track $index) { @if ($index !== 0) {
       <div>.</div>
       }
-      <div>{{ item }}</div>
+      <div (click)="filter(letters)">{{ letters }}</div>
       }
     </div>
   </div>
@@ -47,7 +47,7 @@
 
   <div class="container" style="margin-bottom: 2rem;">
     <div class="row justify-content-center align-items-center gy-5">
-      @for (item of dados; track $index){
+      @for (item of result; track $index){
       <div class="col-sm-4">
         <div class="" (click)="navigate('people-detail', item.id)">
           <div class="profile-card">

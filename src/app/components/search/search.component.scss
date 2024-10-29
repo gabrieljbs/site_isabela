@@ -1,14 +1,33 @@
-.search {
-  background-color: none;
-  padding: 0;
-  .form-field {
-    width: 99%;
+input{
+  box-shadow: none;
+  font-size: 48px;
+  border: none;
+  border-radius: none;
+ 
+}
+input::placeholder {
+  color: #035151; 
+  opacity: 0.3; 
+}
 
-    input {
-      font-size: 42px;
-      font-weight: 500;
-      color: #fff;
-      font-family: "Montserrat", sans-serif;
-    }
-  }
+.input-group{
+  border-bottom: solid #c3c3c3 2px;
+  margin-bottom: 2rem;
+}
+
+button{
+  border: none;
+  color: #035151;
+  font-size: 25px;
+}
+
+button:hover{
+  background: none;
+  color: #035151;
+  font-size: 25px;
+}
+
+button :active{
+  background: none;
+  color: none;
 }
