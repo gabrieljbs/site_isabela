@@ -46,14 +46,13 @@ export class PeopleSearchComponent {
   pageSizeOptions = [5, 10, 25];
   toppings = new FormControl('');
   placeholder = 'Procure pelo nome, expertise or indústria';
-  toppingList: string[] = [
-   "All"
-  ];
+  toppingList: string[] = ['All'];
   value = '';
   myControl = new FormControl('');
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions: Observable<string[]> | undefined;
   dados: any[] = [];
+  info: any[] = [];
   letters: any = [
     'a',
     'b',
@@ -82,22 +81,27 @@ export class PeopleSearchComponent {
     'z',
   ];
   constructor(private router: Router, private dadosService: DataService) {}
-  ngOnInit() {
+  async ngOnInit() {
+    await (await this.dadosService.getData('pessoal')).subscribe(res => {
+      console.log(res)
+      this.dados = res as any
+    })
+
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
       map((value) => this._filter(value || ''))
     );
 
-    this.dadosService.carregarDados().subscribe(
-      (dados) => {
-        this.dados = dados;
+    // this.dadosService.carregarDados().subscribe(
+    //   (dados) => {
+    //     this.dados = dados;
 
-        console.log(this.dados);
-      },
-      (error) => {
-        console.error('Erro ao carregar os dados', error);
-      }
-    );
+    //     console.log(this.dados);
+    //   },
+    //   (error) => {
+    //     console.error('Erro ao carregar os dados', error);
+    //   }
+    // );
   }
 
   private _filter(value: string): string[] {

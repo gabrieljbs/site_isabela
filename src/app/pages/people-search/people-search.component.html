@@ -51,7 +51,7 @@
       <div class="col-sm-4">
         <div class="" (click)="navigate('people-detail', item.id)">
           <div class="profile-card">
-            <img [src]="item.img" alt="" class="profile-img" />
+            <img [src]="item.foto" alt="" class="profile-img" />
 
             <div class="data col">
               <h2 class="row arapey-regular text-start">{{ item.nome }}</h2>
@@ -59,7 +59,7 @@
 
               <div class="value-column row">
                 <h4 class="arimo-regular" style="text-decoration: underline;">{{ item.email }}</h4>
-                <h4  class="arimo-regular">{{ item.telefone1 }}</h4>
+                <h4  class="arimo-regular">{{ item.numeros[0] }}</h4>
                 <h4  class="arimo-regular">{{ item.escritori2 }}</h4>
               </div>
 
