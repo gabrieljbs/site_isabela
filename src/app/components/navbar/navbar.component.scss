@@ -1,7 +1,19 @@
 .background-none {
     background: none;
 }
+.active-border {
+    border-bottom: 5px solid #FE6E5B; 
+    padding-bottom: 4px; 
+}
 
+.home{
+    background: none!important;
+    border-bottom: #C3C3C3 solid 2px;
+}
+
+.home-back{
+    height: 0!important;
+}
 img {
     cursor: pointer;
 }
@@ -114,4 +126,5 @@ button {
 
 li {
     cursor: pointer;
+    
 }
