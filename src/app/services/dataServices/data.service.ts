@@ -6,10 +6,13 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
   private jsonURL = 'assets/dados.json'; 
+  private apiUrl = 'http://localhost:3000/api'
+
   constructor(private http: HttpClient) {}
 
-
-  carregarDados(): Observable<any[]> {
-    return this.http.get<any[]>(this.jsonURL);
+  async getData(name:string){
+    const res = await this.http.get(`${this.apiUrl}/${name}`);
+    return res
   }
+
 }

@@ -3,10 +3,10 @@
   alt=""
   style="height: 1000px; position: absolute; width: 15vw; z-index: -1"
 />
-@for (item of pessoa; track $index) {
+@for (item of dados; track $index) {
 <div class="content">
   <div class="info">
-    <img [src]="item.img" alt="" height="500px" width="100%"/>
+    <img [src]="item.foto" alt="" height="500px" width="100%" />
     <div class="data">
       <div>
         <h1 class="arapey-regular">{{ item.nome }}</h1>
@@ -18,8 +18,9 @@
 
       <div class="contact">
         <p>{{ item.email }}</p>
-        <p>{{ item.telefone1 }}</p>
-        <p>{{ item.telefone2 }}</p>
+        @for (number of item.numeros; track $index) {
+        <p>{{ number }}</p>
+        }
       </div>
 
       <button class="btn">
@@ -28,12 +29,9 @@
       <div class="rankings">
         <h4 class="arapey-regular">Rankings</h4>
 
-        <p>{{ item.ranking1 }}</p>
-        <p>{{ item.ranking2 }}</p>
-        <p>{{ item.ranking3 }}</p>
-        <p>{{ item.ranking4 }}</p>
-        <p>{{ item.ranking5 }}</p>
-        <p>{{ item.ranking6 }}</p>
+        @for (ranking of item.rankings; track $index) {
+        <p>{{ ranking }}</p>
+        }
       </div>
 
       <div class="languages">
@@ -51,11 +49,8 @@
   <div class="main">
     <div class="introduction">
       <h4 class="arapey-regular">
-        {{ item.apresentacao1 }}
+        {{ item.resumo }}
       </h4>
-      <p class="arimo-regular">
-        {{ item.apresentacao2 }}
-      </p>
     </div>
 
     <div class="experience">
@@ -72,49 +67,34 @@
         <h3 class="arimo-regular">Setores:</h3>
 
         <div class="tags">
-          <div class="tag arimo-regula" style="background-color: #39e2af8a">
-            {{ item.setores1 }}
-          </div>
-          <div class="tag arimo-regular">{{ item.setores2 }}</div>
-          <div class="tag arimo-regular">{{ item.setores3 }}</div>
-          <div class="tag arimo-regular">{{ item.setores4 }}</div>
-          <div class="tag arimo-regular">{{ item.setores5 }}</div>
-          <div class="tag arimo-regular">{{ item.setores6 }}</div>
+          @for (setor of espcialidades; track $index) { @if (setor.name ==
+          'Setores') {
+          <div class="tag arimo-regular">{{ setor.conteudo }}</div>
+          } }
         </div>
       </div>
 
       <div class="practice-areas">
         <h3>Áreas de prática:</h3>
-
-        <div class="tags">
-          <div class="tag" style="background-color: #39e2af8a">
-            Contratos Comerciais
-          </div>
-          <div class="tag arimo-regula">{{ item.pratica1 }}</div>
-          <div class="tag arimo-regula">{{ item.pratica2 }}</div>
-          <div class="tag arimo-regula">{{ item.pratica3 }}</div>
-          <div class="tag arimo-regula">{{ item.pratica4 }}</div>
-          <div class="tag arimo-regula">{{ item.pratica5 }}</div>
-          <div class="tag arimo-regula">{{ item.pratica6 }}</div>
-          <div class="tag arimo-regula">{{ item.pratica7 }}</div>
-          <div class="tag arimo-regula">{{ item.pratica8 }}</div>
-          <div class="tag arimo-regula">{{ item.pratica9 }}</div>
-        </div>
+        @for (setor of espcialidades; track $index) { 
+          @if (setor.name == 'Área de Prática') {
+        <div class="tag arimo-regular">{{ setor.conteudo }}</div>
+        } }
       </div>
     </div>
 
     <div class="qualifications">
       <h4 class="arapey-regular">Qualificações</h4>
 
-      <p class="arimo-regula">{{ item.qualificacao }}</p>
+      <p class="arimo-regula">{{ item.qualificacoes }}</p>
     </div>
 
     <div class="alliances-and-associations">
       <h3 class="class arimo-regula">Membro da:</h3>
-
-      <p class="arimo-regula">
-        {{ item.aliancas }}
-      </p>
+      @for (membro of aliancas; track $index) { @if (membro.name == 'Membro(a)')
+      {
+      <p class="arimo-regula">{{ membro.nome }}</p>
+      } }
     </div>
   </div>
 </div>
