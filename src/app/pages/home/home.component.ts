@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, HostListener } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
 import { NgbScrollSpyModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -18,7 +17,6 @@ import { ExploreOurCapabilitesComponent } from '../../components/explore-our-cap
   selector: 'app-home',
   standalone: true,
   imports: [
-    HeaderComponent,
     NgbScrollSpyModule,
     MatFormFieldModule,
     MatSelectModule,
