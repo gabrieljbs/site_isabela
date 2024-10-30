@@ -51,10 +51,10 @@
 <div class="news">
   <div class="container">
     <div class="title row">
-      <div class="col-4" style="border-bottom: #39E2B0 solid 20px;">
-        <h1 class="arapey-regular">Áudio e Video</h1>
+      <div class="col-4" style="border-bottom: #39e2b0 solid 20px">
+        <h1 class="arapey-regular">Áudio e Vídeo</h1>
       </div>
-      <div class="col" style="  border-bottom: #39E2B0 solid 2px;">
+      <div class="col" style="border-bottom: #39e2b0 solid 2px">
         <p class="arimo-regular">
           Acesse vídeos, entrevistas e podcasts que trazem discussões atuais e
           análises jurídicas de forma clara e acessível.
@@ -62,25 +62,142 @@
       </div>
     </div>
 
-    <div class="row" >
+    <div class="row">
       @for (item of loop; track $index) {
-      <div class="info col-4" >
-        <div style="border-bottom: #50505075 solid 2px; padding-bottom: 1rem;">
-            <img src="./../../../assets/abertura_2.png" alt="" />
-            <h3 class="arimo-regular">Descarbonização</h3>
-            <h2 class="arapey-regular">page when looking at its layout.</h2>
-            <h3 class="arimo-regular">
-              Many desktop publishing packages and web page editors now use Lorem
-              Ipsum as their default model text.
-            </h3>
-    
-            <span >
-                <i class="bi bi-play-circle"></i>
-                00:12:35            
-            </span>
+      <div class="info col-4">
+        <div style="border-bottom: #50505075 solid 3px; padding-bottom: 1rem">
+          <img src="./../../../assets/abertura_2.png" alt="" />
+          <h3 class="arimo-regular">Descarbonização</h3>
+          <h2 class="arapey-regular">page when looking at its layout.</h2>
+          <h3 class="arimo-regular">
+            Many desktop publishing packages and web page editors now use Lorem
+            Ipsum as their default model text.
+          </h3>
+
+          <span>
+            <i class="bi bi-play-circle"></i>
+            00:12:35
+          </span>
         </div>
       </div>
       }
+    </div>
+  </div>
+</div>
+
+<div class="news">
+  <div class="container">
+    <div class="title row">
+      <div class="col-4" style="border-bottom: #39e2b0 solid 20px">
+        <h1 class="arapey-regular" style="line-height: 40px">
+          Revistas e Boletins Informativos
+        </h1>
+      </div>
+      <div class="col" style="border-bottom: #39e2b0 solid 2px">
+        <p class="arimo-regular">
+          Leia artigos e boletins informativos que abordam temas relevantes no
+          Direito e atualizações do setor.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="info col-6">
+        <div class="boletins">
+          <img src="./../../../assets/coruja.png" alt="" />
+          <h3 class="arimo-regular">Descarbonização</h3>
+          <h2 class="arapey-regular">page when looking at its layout.</h2>
+          <h3 class="arimo-regular">
+            Many desktop publishing packages and web page editors now use Lorem
+            Ipsum as their default model text.
+          </h3>
+
+          <span style="margin-top: 10%;">
+            Compartilhar
+            <i class="bi bi-instagram" style="font-size: 25px;"></i>
+            <i class="bi bi-linkedin" style="font-size: 25px;"></i>
+            <i class="bi bi-share" style="font-size: 25px;"></i>
+          </span>
+        </div>
+      </div>
+      @for (item of loop2; track $index) {
+      <div class="info col-3">
+        <div class="boletins">
+          <img
+            src="./../../../assets/abertura_2.png"
+            alt=""
+            width="300px"
+            height="330px"
+          />
+          <h3 class="arimo-regular">Descarbonização</h3>
+          <h2 class="arapey-regular">page when looking at its layout.</h2>
+          <h3 class="arimo-regular">
+            Many desktop publishing packages and web page editors now use Lorem
+            Ipsum as their default model text.
+          </h3>
+
+          <span>
+            Compartilhar
+            <i class="bi bi-instagram" style="font-size: 25px;"></i>
+            <i class="bi bi-linkedin" style="font-size: 25px;"></i>
+            <i class="bi bi-share" style="font-size: 25px;"></i>
+          </span>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
+
+<div class="news">
+  <div class="container">
+    <div class="title row">
+      <div class="col-4" style="border-bottom: #39e2b0 solid 20px">
+        <h1 class="arapey-regular" style="line-height: 40px">
+          Revistas e Boletins Informativos
+        </h1>
+      </div>
+      <div class="col" style="border-bottom: #39e2b0 solid 2px">
+        <p class="arimo-regular">
+          Leia artigos e boletins informativos que abordam temas relevantes no
+          Direito e atualizações do setor.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      @for (item of loop2; track $index) {
+      <div class="info col-3">
+        <div
+         class="boletins"
+        >
+          <img
+            src="./../../../assets/abertura_2.png"
+            alt=""
+            width="300px"
+            height="330px"
+          />
+          <h3 class="arimo-regular">Descarbonização</h3>
+          <h2 class="arapey-regular">page when looking at its layout.</h2>
+          <h3 class="arimo-regular">
+            Many desktop publishing packages and web page editors now use Lorem
+            Ipsum as their default model text.
+          </h3>
+        </div>
+      </div>
+      }
+      <div class="info col-6">
+        <div class="boletins">
+          <img src="./../../../assets/coruja.png" alt="" />
+          <h3 class="arimo-regular">Descarbonização</h3>
+          <h2 class="arapey-regular">page when looking at its layout.</h2>
+          <h3 class="arimo-regular">
+            Many desktop publishing packages and web page editors now use Lorem
+            Ipsum as their default model text.
+          </h3>
+
+        </div>
+      </div>
     </div>
   </div>
 </div>
