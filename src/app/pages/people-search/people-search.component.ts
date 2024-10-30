@@ -16,9 +16,9 @@ import { map, Observable, startWith } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { Router } from '@angular/router';
-import { DataService } from '../../services/dataServices/data.service';
 import { SearchComponent } from '../../components/search/search.component';
 import { PessoalService } from '../../services/pessoalServices/pessoal-service.service';
+import { ReplacePipe } from "../../replace.pipe";
 @Component({
   selector: 'app-people-search',
   standalone: true,
@@ -37,7 +37,8 @@ import { PessoalService } from '../../services/pessoalServices/pessoal-service.s
     AsyncPipe,
     MatPaginatorModule,
     SearchComponent,
-  ],
+    ReplacePipe
+],
   templateUrl: './people-search.component.html',
   styleUrl: './people-search.component.scss',
   providers: [NgbCarouselConfig],
@@ -116,6 +117,5 @@ export class PeopleSearchComponent {
     this.result = this.dados.filter(res=>res.nome.startsWith(upperLetter));
     console.log(this.result)
   }
-
   
 }
