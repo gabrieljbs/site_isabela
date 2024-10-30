@@ -11,7 +11,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { InsightsComponent } from './pages/insights/insights.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo:'/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'people-search', component: PeopleSearchComponent },
   { path: 'careers', component: CareersComponent },

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataService } from '../../services/dataServices/data.service';
 import { PessoalService } from '../../services/pessoalServices/pessoal-service.service';
+import { ReplacePipe } from "../../replace.pipe";
 @Component({
   selector: 'app-people-detail',
   standalone: true,
-  imports: [],
+  imports: [ReplacePipe],
   templateUrl: './people-detail.component.html',
   styleUrl: './people-detail.component.scss',
 })

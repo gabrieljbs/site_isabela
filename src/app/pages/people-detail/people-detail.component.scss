@@ -53,14 +53,16 @@ p {
     h1 {
         color: #FFF;
         font-size: 46px;
+        
     }
 
     .partner {
-        border-top: #39e2afb0 solid 2px;
+        border-top: #39e2afb0 solid 3px;
         width: 60%;
-
+        padding-top: 1rem;
         p {
             color: #39E2B0;
+            font-weight: 600;
         }
     }
 
@@ -162,10 +164,12 @@ p {
     }
 
     .alliances-and-associations {
+        margin-top: 3rem;
+        margin-bottom: 3rem ;
         p {
             font-size: 20px;
             color: #505050;
-            line-height: 25px;
+            line-height: 35px;
             font-weight: 500;
         }
     }

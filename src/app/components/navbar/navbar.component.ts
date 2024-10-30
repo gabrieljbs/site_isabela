@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { BtnNavComponent } from '../btn-nav/btn-nav.component';
 import { ToggleComponent } from '../toggle/toggle.component';
 
 import { inject, TemplateRef } from '@angular/core';
@@ -11,7 +10,7 @@ import { filter } from 'rxjs';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [BtnNavComponent, ToggleComponent, CommonModule],
+  imports: [ ToggleComponent, CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
