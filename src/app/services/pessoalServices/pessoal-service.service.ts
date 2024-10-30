@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
 })
 export class PessoalService {
   private jsonURL = 'assets/dados.json'; 
-  private apiUrl = 'http://localhost:3000/api'
+  // private apiUrl = 'http://localhost:3000/api'
+  private apiUrl = 'http://https://backend-costa-rodrigues-85tyzw315-gabriels-projects-368d0f0a.vercel.app//api'
 
   constructor(private http: HttpClient) {}
 
