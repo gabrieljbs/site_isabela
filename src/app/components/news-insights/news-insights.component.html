@@ -1,134 +1,149 @@
-<div id="Spotlight-on" class="Spotlight-on">
-  <mat-tab-group
-    animationDuration="2000ms"
-    mat-stretch-tabs="false"
-    mat-align-tabs="center"
+<div style="background: #efefef">
+  <ul
+    ngbNav
+    #navTabs="ngbNav"
+    class="nav nav-tabs d-flex justify-content-center"
+    role="tablist"
   >
-    <mat-tab label="QUEM SOMOS">
-      <div class="about-us">
-        <div class="container">
-          <div class="row">
-            <div class="col-4">
-              <h1 class="arapey-regular">Costa Rodrigues Advogados, COSRO</h1>
-              <p class="arimo-regular">
-                Este nome, que não personifica um advogado ou advogada, mas sim
-                um escritório multisetorial e multidisciplinar de advocacia,
-                carrega a responsabilidade e o compromisso de cada um de nós em
-                auxiliar nossos clientes a impactar positivamente a vida das
-                sociedades e comunidades em que atuam.
-              </p>
-              <img src="./assets/foto_07.png" alt="" />
-            </div>
-            <div class="col-4">
-              <h1 class="arapey-regular">
-                Somos mais de 50 profissionais multisetoriais e
-                multidisciplinares
-              </h1>
-              <p class="arimo-regular">
-                Acumulamos décadas de experiência profissional adquiridas nos
-                maiores escritórios de advocacia full service do Brasil e do
-                mundo
-              </p>
-              <img src="./assets/Intersect_3.png" alt="" />
-            </div>
-            <div class="col-4">
-              <img src="./assets/globo_2.png" alt="" />
-              <h1 class="arapey-regular">Reunimos visões variadas de mundo</h1>
-              <p class="arimo-regular">
-                Visões que convergem no interesse comum em entregar valor para
-                nossos clientes e prestar serviços de excelência. Juntos,
-                trabalhamos incansavelmente para promover desenvolvimento
-                sustentável, diversidade, equidade e inclusão, refletindo nossa
-                missão de fazer a diferença em cada relação que construímos
-              </p>
+    <li [ngbNavItem]="1">
+      <a class="arimo-regular" ngbNavLink>QUEM SOMOS</a>
+      <ng-template ngbNavContent>
+        <div class="about-us">
+          <div class="container">
+            <div class="row">
+              <div class="col-4">
+                <h1 class="arapey-regular">Costa Rodrigues Advogados, COSRO</h1>
+                <p class="arimo-regular">
+                  Este nome, que não personifica um advogado ou advogada, mas
+                  sim um escritório multisetorial e multidisciplinar de
+                  advocacia, carrega a responsabilidade e o compromisso de cada
+                  um de nós em auxiliar nossos clientes a impactar positivamente
+                  a vida das sociedades e comunidades em que atuam.
+                </p>
+                <img src="./assets/foto_07.png" alt="" />
+              </div>
+              <div class="col-4">
+                <h1 class="arapey-regular">
+                  Somos mais de 50 profissionais multisetoriais e
+                  multidisciplinares
+                </h1>
+                <p class="arimo-regular">
+                  Acumulamos décadas de experiência profissional adquiridas nos
+                  maiores escritórios de advocacia full service do Brasil e do
+                  mundo
+                </p>
+                <img src="./assets/Intersect_3.png" alt="" />
+              </div>
+              <div class="col-4">
+                <img src="./assets/globo_2.png" alt="" />
+                <h1 class="arapey-regular">
+                  Reunimos visões variadas de mundo
+                </h1>
+                <p class="arimo-regular">
+                  Visões que convergem no interesse comum em entregar valor para
+                  nossos clientes e prestar serviços de excelência. Juntos,
+                  trabalhamos incansavelmente para promover desenvolvimento
+                  sustentável, diversidade, equidade e inclusão, refletindo
+                  nossa missão de fazer a diferença em cada relação que
+                  construímos
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </mat-tab>
+      </ng-template>
+    </li>
 
-    <mat-tab label="UMA ABORDAGEM COLABORATIVA">
-      <div class="about-us">
-        <div class="container">
-          <div class="row">
-            <div class="col-4">
-              <img src="./assets/globo_2.png" alt="" />
-              <h1 class="arapey-regular">
-                Estrutura multissetorial e multidisciplinar
-              </h1>
-              <p class="arimo-regular">
-                Conhecemos as particularidades de cada segmento da economia
-              </p>
-            </div>
-            <div class="col-4">
-              <h1 class="arapey-regular">
-                15 setores da economia formam o núcleo do nosso negócio
-              </h1>
-              <p class="arimo-regular">
-                Agronegócio, Alimentos e Bebidas, Bens de Consumo e Varejo,
-                Cannabis, Descarbonização, Energia, Esportes, Imobiliário,
-                Infraestrutura, Life Sciences e Healthcare, Mineração, Navegação
-                e Tecnologias
-              </p>
-              <img src="./assets/Intersect_3.png" alt="" />
-            </div>
-            <div class="col-4">
-              <h1 class="arapey-regular">
-                Atuamos em todas as áreas do direito estratégicas para esta
-                abordagem setorial
-              </h1>
-              <p class="arimo-regular">
-                Ambiental, Contencioso e Arbitragem, Contratos Administrativos e
-                Licitações, Contratos Comerciais, EGVC, Financiamento de
-                Projetos, Regulatório, Política e Compliance, Relações
-                Governamentais, Societário/M&A, Sustentabilidade, Trabalhista e
-                Tributário
-              </p>
-              <img src="./assets/foto_08.png" alt="" />
+    <li [ngbNavItem]="2">
+      <a class="arimo-regular" ngbNavLink>UMA ABORDAGEM COLABORATIVA</a>
+      <ng-template ngbNavContent>
+        <div class="about-us">
+          <div class="container">
+            <div class="row">
+              <div class="col-4">
+                <img src="./assets/globo_2.png" alt="" />
+                <h1 class="arapey-regular">
+                  Estrutura multissetorial e multidisciplinar
+                </h1>
+                <p class="arimo-regular">
+                  Conhecemos as particularidades de cada segmento da economia
+                </p>
+              </div>
+              <div class="col-4">
+                <h1 class="arapey-regular">
+                  15 setores da economia formam o núcleo do nosso negócio
+                </h1>
+                <p class="arimo-regular">
+                  Agronegócio, Alimentos e Bebidas, Bens de Consumo e Varejo,
+                  Cannabis, Descarbonização, Energia, Esportes, Imobiliário,
+                  Infraestrutura, Life Sciences e Healthcare, Mineração,
+                  Navegação e Tecnologias
+                </p>
+                <img src="./assets/Intersect_3.png" alt="" />
+              </div>
+              <div class="col-4">
+                <h1 class="arapey-regular">
+                  Atuamos em todas as áreas do direito estratégicas para esta
+                  abordagem setorial
+                </h1>
+                <p class="arimo-regular">
+                  Ambiental, Contencioso e Arbitragem, Contratos Administrativos
+                  e Licitações, Contratos Comerciais, EGVC, Financiamento de
+                  Projetos, Regulatório, Política e Compliance, Relações
+                  Governamentais, Societário/M&A, Sustentabilidade, Trabalhista
+                  e Tributário
+                </p>
+                <img src="./assets/foto_08.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </mat-tab>
+      </ng-template>
+    </li>
 
-    <mat-tab  label="UM TIME SEM FRONTEIRAS">
-      <div class="about-us">
-        <div class="container">
-          <div class="row">
-            <div class="col-4">
-              <h1 class="arapey-regular">Sem limites geográficos</h1>
-              <p class="arimo-regular">
-                Atuamos de forma integrada, independentemente se no Rio de
-                Janeiro, em São Paulo, Brasília, Nova Iorque, Roma, Madrid ou
-                Cingapura, com uma cultura que valoriza e fortalece a
-                diversidade de origens, conhecimentos e habilidades dos nossos
-                colaboradores
-              </p>
-              <img src="./assets/globo_2.png" alt="" />
-            </div>
-            <div class="col-4">
-              <h1 class="arapey-regular">
-                Abordagem empreendedora, que eleva o comprometimento e o
-                conhecimento
-              </h1>
-              <p class="arimo-regular">
-                Nossa estrutura de trabalho multisetorial e multidisciplinar
-                permite que nossos profissionais escolham os setores e as áreas
-                de atuação em que desejam atuar sob uma ótima jurídico-econômica
-              </p>
-              <img src="./assets/Intersect_3.png" alt="" />
-            </div>
-            <div class="col-4">
-              <img src="./../../../assets/foto_09.png" alt="" />
-              <h1 class="arapey-regular">Comprometimento e o conhecimento</h1>
-              <p class="arimo-regular">
-                Melhores resultados para nossos clientes, na medida das boas
-                práticas da indústria em que atuam
-              </p>
+    <li [ngbNavItem]="3">
+      <a class="arimo-regular" ngbNavLink>UM TIME SEM FRONTEIRAS</a>
+      <ng-template ngbNavContent>
+        <div class="about-us">
+          <div class="container">
+            <div class="row">
+              <div class="col-4">
+                <h1 class="arapey-regular">Sem limites geográficos</h1>
+                <p class="arimo-regular">
+                  Atuamos de forma integrada, independentemente se no Rio de
+                  Janeiro, em São Paulo, Brasília, Nova Iorque, Roma, Madrid ou
+                  Cingapura, com uma cultura que valoriza e fortalece a
+                  diversidade de origens, conhecimentos e habilidades dos nossos
+                  colaboradores
+                </p>
+                <img src="./assets/globo_2.png" alt="" />
+              </div>
+              <div class="col-4">
+                <h1 class="arapey-regular">
+                  Abordagem empreendedora, que eleva o comprometimento e o
+                  conhecimento
+                </h1>
+                <p class="arimo-regular">
+                  Nossa estrutura de trabalho multisetorial e multidisciplinar
+                  permite que nossos profissionais escolham os setores e as
+                  áreas de atuação em que desejam atuar sob uma ótima
+                  jurídico-econômica
+                </p>
+                <img src="./assets/Intersect_3.png" alt="" />
+              </div>
+              <div class="col-4">
+                <img src="./assets/foto_09.png" alt="" />
+                <h1 class="arapey-regular">Comprometimento e o conhecimento</h1>
+                <p class="arimo-regular">
+                  Melhores resultados para nossos clientes, na medida das boas
+                  práticas da indústria em que atuam
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </mat-tab>
-  </mat-tab-group>
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="navTabs" class="tab-content mt-3"></div>
 </div>
