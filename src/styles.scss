@@ -66,6 +66,8 @@ $front_tample-theme: mat.define-light-theme(
 
 html,
 body {
+  width: 100vw;
+  padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif !important;
   font-optical-sizing: auto;

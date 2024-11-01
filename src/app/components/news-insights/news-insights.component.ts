@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-news-insights',
   standalone: true,
-  imports: [NgbCarouselModule, FormsModule, MatTabsModule],
+  imports: [NgbCarouselModule, FormsModule, MatTabsModule,NgbNavModule],
   templateUrl: './news-insights.component.html',
   styleUrl: './news-insights.component.scss',
 })
