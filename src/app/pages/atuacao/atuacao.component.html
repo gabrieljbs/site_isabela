@@ -1,0 +1,127 @@
+<div class="container">
+  <img
+    src="./assets/Intersect.png"
+    alt="Imagem Esquerda"
+    class="img-outside-left-top"
+  />
+  <div class="introduction row justify-content-between">
+    <div class="col-sm-5">
+      <button class="arimo-regular">
+        <i class="bi bi-arrow-90deg-up"></i>
+        Indústria
+      </button>
+      <h1 class="arapey-regular">Life sciences and Healthcare</h1>
+    </div>
+    <div class="col-sm-5">
+      <p class="arapey-regular">
+        Atuamos para os principais players das indústrias farmacêuticas,
+        farmoquímicas, de vacinas, biotecnologia, medtech, dispositivos médicos,
+        saúde do consumidor e serviços de prestação de assistência direta à
+        saúde
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="./../../../assets/abertura_3.png" alt="" />
+</div>
+<div class="about-us">
+  <img src="assets/image_04.png" alt="" />
+  <p class="arimo-regular">
+    Ao adotar continuamente tecnologia avançada, práticas sofisticadas de
+    sustentabilidade e trabalhar proativamente para melhorar o acesso dos
+    pacientes a produtos, serviços e soluções vitais,
+    <b>
+      esta indústria ocupa uma posição indiscutivelmente relevante na economia
+      global
+    </b>
+  </p>
+</div>
+
+<div class="industrie">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-6">
+        <h1 class="arapey-regular">Nosso olhar sobre a indústria</h1>
+        <p class="arapey-regular">
+          A emergência de novas tecnologias está impulsionando o mercado em
+          direção a uma metamorfose abrangente e irreversível. Dignos de nota
+          são os avanços rápidos na digitalização e o surgimento de novos
+          paradigmas comerciais na tecnologia médica e no setor
+        </p>
+      </div>
+
+      <div class="col-5">
+        <img src="./../../../assets/abertura_4.png" alt="" />
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="text col-10">
+        <p lass=" arimo-regular  col-sm-10 offset-md-3">
+          {{ mostrarTextoCompleto ? textoCompleto : textoResumido }}
+        </p>
+        <span (click)="alternarTexto()">
+          <i class="bi bi-chevron-up"></i>
+          {{ mostrarTextoCompleto ? "Menos" : "Mais" }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-tabs-atuacao></app-tabs-atuacao>
+
+<div class="pratica position-relative">
+  <img
+    src="./assets/intersect_1.png"
+    alt="Imagem Esquerda"
+    class="img-outside-left"
+  />
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-5">
+        <h1 class="arapey-regular">Áreas de Prática</h1>
+        <p class="arapey-regular">
+          +10 profissionais do direito especializados na indústria
+        </p>
+        <p class="arapey-regular" style="border-top: solid #39e2b0 2px">
+          +10 profissionais técnico-científicos que suportam o dia-a-dia da
+          indústria
+        </p>
+      </div>
+    </div>
+  </div>
+  <img
+    src="./assets/borboleta.png"
+    alt="Imagem Direita"
+    class="img-outside-right"
+  />
+</div>
+<div class="info">
+  <div class="container">
+    <div class="info">
+      <p class="arimo-regular">
+        Ambiental | Contratos Administrativos e Licitações | Contratos
+        Comerciais | Contencioso e Arbitragem | EGVC | Financiamento de Projetos
+        Regulatório, Política e Compliance | Relações Governamentais |
+        Societário/M&A | Sustentabilidade | Trabalhista | Tributário
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="setores">
+  <div class="container">
+    <div class="tags">
+      @for (setor of areasDePraticaConteudo; track $index) {
+      <div class="tag arimo-regular">{{ setor }}</div>
+      }
+    </div>
+  </div>
+</div>
+
+<app-find-an-advision></app-find-an-advision>

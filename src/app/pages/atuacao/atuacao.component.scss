@@ -1,0 +1,154 @@
+ul {
+    list-style: none;
+}
+
+.img-outside-left-top {
+    position: absolute;
+    left: 2rem;
+    max-width: 370px;
+    object-fit: cover;
+}
+
+.introduction {
+    margin: 10rem 0;
+
+    button {
+        color: #FE6E5B;
+        background: none;
+        border: none;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+    }
+
+    h1 {
+        color: #035151;
+        font-size: 96px;
+        line-height: 80px;
+    }
+
+    p {
+        color: #035151;
+        border-top: #035151 solid 3px;
+        font-size: 32px;
+        line-height: 40px;
+        padding-top: 4rem;
+        text-align: end;
+
+    }
+}
+
+.about-us {
+    display: flex;
+    flex-direction: row;
+
+    p {
+        font-size: 28px;
+        color: #035151;
+        width: 60vw;
+        height: 51.7vh;
+        line-height: 40px;
+        border-left: #035151 solid 10px;
+        padding-left: 5rem;
+        padding-top: 5rem;
+    }
+}
+
+
+.industrie {
+    background: #035151;
+
+    h1 {
+        font-size: 96px;
+        line-height: 80px;
+        color: #FFF;
+        margin-top: 6rem;
+        margin-bottom: 4rem;
+    }
+
+    p {
+        font-size: 36px;
+        line-height: 50px;
+        color: #FFF;
+    }
+
+}
+
+.text {
+    padding: 4rem 0;
+
+    p {
+        line-height: 38px;
+        font-size: 22px;
+        margin-bottom: 3rem;
+    }
+
+    span {
+        cursor: pointer;
+        color: #FE6E5B;
+        font-size: 22px;
+        font-weight: 500;
+    }
+}
+
+.pratica {
+
+    h1 {
+        color: #035151;
+        font-size: 96px;
+        line-height: 80px;
+    }
+
+    p {
+        font-size: 36px;
+        color: #035151;
+        line-height: 55px;
+        margin-left: 5rem;
+        padding: 1rem 0;
+    }
+}
+
+.img-outside-left {
+    position: absolute;
+    left: 0;
+    max-width: 370px;
+
+}
+
+.img-outside-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+}
+
+
+.info{
+    margin-top: 5rem;
+    border-bottom: solid 2px #39E2B0;
+    p {
+        font-size: 22px;
+        color: #505050;
+        line-height: 40px;
+    }
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c3c3c383;
+    color: #505050;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+    white-space: nowrap;
+}
