@@ -1,6 +1,7 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
 import { PessoalService } from '../../services/pessoalServices/pessoal-service.service';
 import { ReplacePipe } from '../../replace.pipe';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-setores',
@@ -23,7 +24,7 @@ export class SetoresComponent {
   areasDePraticaConteudo: any;
   pessoal: any[] = [];
   dados:any[]=[];
-  constructor(private pessoalService: PessoalService) {}
+  constructor(private pessoalService: PessoalService,private router:Router) {}
 
   async ngOnInit() {
     this.areasDePraticaConteudo = this.processExperiencias(this.areasPraticas);
@@ -50,8 +51,6 @@ export class SetoresComponent {
     const cleanedItems: any = items.map((item) =>
       item.replace(/{|}/g, '').replace(/\\/g, "'").replace(/"/g, '').trim()
     );
-
-    console.log(cleanedItems)
     return cleanedItems;
   }
 
@@ -69,4 +68,9 @@ export class SetoresComponent {
       swiperContainer.swiper.slidePrev();
     }
   }
+
+  navigate(path: string, id: number) {
+    this.router.navigate(['/', path], { state: { id: id } });
+  }
+
 }

@@ -76,7 +76,7 @@ export class NavbarComponent {
 
   arrayAtuacao: any = [{ title: 'Atuação', conteudo: [] }];
 
-  constructor(private router: Router, private atuacaoService: AtuacaoService) {}
+  constructor(private router: Router, private atuacaoService: AtuacaoService,) {}
 
   private modalService = inject(NgbModal);
 
@@ -85,6 +85,7 @@ export class NavbarComponent {
     this.activeRoute = this.router.url.split('/').pop() || '';
     this.isActive = this.activeRoute;
 
+    const navigation = this.router.getCurrentNavigation();
     await (
       await this.atuacaoService.list()
     ).subscribe((res) => {
@@ -93,11 +94,12 @@ export class NavbarComponent {
       this.atuacaoConteudo = this.arrayAtuacao.conteudo;
     });
   }
-
-
-
   navigate(path: string, id: any) {
-    this.router.navigate(['/', path], { state: { id: id } });
+    this.router.navigate(['/', path], { state: { id: id } }).then(() => {
+    this.atuacaoService.setId(id);
+    });
+
+    this.modalService.dismissAll();
   }
 
   isactiveRouter() {
@@ -112,6 +114,4 @@ export class NavbarComponent {
   openModalXl(content: TemplateRef<any>) {
     this.modalService.open(content, { fullscreen: 'mysize' });
   }
-
-  
 }

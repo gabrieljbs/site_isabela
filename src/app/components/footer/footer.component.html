@@ -1,15 +1,19 @@
 <footer>
   <div class="top">
     <div class="list">
-      <p (click)="navigate('politica-anticorrupcao','')">Anticorrupção</p>
+      <p (click)="navigate('politica-anticorrupcao', '')">Anticorrupção</p>
       <p>|</p>
-      <p (click)="navigate('politica-confidencialidade','')">Confidencialidade</p>
+      <p (click)="navigate('politica-confidencialidade', '')">
+        Confidencialidade
+      </p>
       <p>|</p>
-      <p (click)="navigate('politica-etica-e-conduta','')">Ética e Conduta</p>
+      <p (click)="navigate('politica-etica-e-conduta', '')">Ética e Conduta</p>
       <p>|</p>
-      <p (click)="navigate('politica-privacidade','')">Dados para Privacidade</p>
+      <p (click)="navigate('politica-privacidade', '')">
+        Dados para Privacidade
+      </p>
       <p>|</p>
-      <p (click)="navigate('acessibilidade','')">Acessibilidade</p>
+      <p (click)="navigate('acessibilidade', '')">Acessibilidade</p>
     </div>
   </div>
 
@@ -17,72 +21,14 @@
     <ul>
       <h5>Atuação</h5>
 
-      <li>
-        <button>
-          <p>Agronegócio</p>
+      @for (item of atuacaoConteudo; track $index) {
+      <li >
+        <button (click)="navigate('atuacao', item.id)">
+          <p>{{ item.nome }}</p>
         </button>
       </li>
 
-      <li>
-        <button>
-          <p>Alimentos e Bebidas</p>
-        </button>
-      </li>
-      <li>
-        <button>
-          <p>Bens de Consumo e Varejo</p>
-        </button>
-      </li>
-      <li>
-        <button>
-          <p>Cannabis</p>
-        </button>
-      </li>
-      <li>
-        <button>
-          <p>Descarbonização</p>
-        </button>
-      </li>
-      <li>
-        <button>
-          <p>Energia</p>
-        </button>
-      </li>
-      <li>
-        <button>
-          <p>Esportes</p>
-        </button>
-      </li>
-      <li>
-        <button>
-          <p>Imobiliário</p>
-        </button>
-      </li>
-      <li>
-        <button>
-          <p>Infraestrutura</p>
-        </button>
-      </li>
-      <li>
-        <button>
-          <p>Life Sciences e Healthcare</p>
-        </button>
-      </li>
-      <li>
-        <button>
-          <p>Mineração</p>
-        </button>
-      </li>
-      <li>
-        <button>
-          <p>Navegação</p>
-        </button>
-      </li>
-      <li>
-        <button>
-          <p>Tecnologia</p>
-        </button>
-      </li>
+      }
     </ul>
 
     <ul>
@@ -180,7 +126,7 @@
 
   <div class="bottom">
     <img src="../../../assets/Logo_01.png" alt="" />
-   
+
     <p>© 2024 A&O Costa Rodrigues</p>
   </div>
 </footer>
