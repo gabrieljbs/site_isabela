@@ -34,7 +34,7 @@ ul {
         font-size: 32px;
         line-height: 40px;
         padding-top: 4rem;
-        text-align: end;
+        
 
     }
 }
@@ -121,34 +121,4 @@ ul {
     top: 0;
     right: 0;
     object-fit: cover;
-}
-
-
-.info{
-    margin-top: 5rem;
-    border-bottom: solid 2px #39E2B0;
-    p {
-        font-size: 22px;
-        color: #505050;
-        line-height: 40px;
-    }
-}
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-.tag {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #c3c3c383;
-    color: #505050;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    padding: 10px;
-    white-space: nowrap;
 }

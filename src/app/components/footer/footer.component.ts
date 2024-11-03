@@ -15,12 +15,7 @@ export class FooterComponent {
   expertise: any;
   constructor(
     private router: Router,
-
-
-
   ) {
-
-
   }
 
   navigate(path: string, page: string) {

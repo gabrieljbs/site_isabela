@@ -1,12 +1,15 @@
 <div
   class="bar"
   [ngClass]="{
-    'home': isActive === 'home'
+    home: isActive === 'home'
   }"
 >
-  <div class="container " [ngClass]="{
-    'home-border': isActive === 'home'
-  }">
+  <div
+    class="container"
+    [ngClass]="{
+      'home-border': isActive === 'home'
+    }"
+  >
     <div class="row justify-content-between align-items-center">
       <div class="col-sm-4">
         <img
@@ -14,7 +17,7 @@
           alt="logo"
           width="371"
           height="67"
-          (click)="navigate('home')"
+          (click)="navigate('home',null)"
         />
       </div>
 
@@ -59,7 +62,7 @@
               'active-border': isActive === 'insights'
             }"
           >
-            <div class="title arimo-regular" (click)="navigate('insights')">
+            <div class="title arimo-regular" (click)="navigate('insights',null)">
               Insigths
             </div>
           </li>
@@ -68,7 +71,7 @@
               'active-border': isActive === 'careers'
             }"
           >
-            <div class="title arimo-regular" (click)="navigate('careers')">
+            <div class="title arimo-regular" (click)="navigate('careers',null)">
               Carreira
             </div>
           </li>
@@ -88,9 +91,12 @@
   </div>
 </div>
 
-<div style="height: 142px; width: 100%" [ngClass]="{
-  'home-back': isActive === 'home'
-}"></div>
+<div
+  style="height: 142px; width: 100%"
+  [ngClass]="{
+    'home-back': isActive === 'home'
+  }"
+></div>
 
 <!-- Modal de pessoas-->
 
@@ -107,7 +113,7 @@
       <div class="modal-body">
         @for (opcao of item.opcao; track $index) {
         <ul>
-          <li class="label arimo-regular col" (click)="navigate(opcao.path)">
+          <li class="label arimo-regular col" (click)="navigate(opcao.path,null)">
             <i class="bi bi-arrow-right"></i>
             <b>
               {{ opcao.label }}
@@ -158,46 +164,27 @@
 <ng-template #contentAtuacao let-modal>
   <div class="line"></div>
   <div class="content">
-    @for (item of arrayAtuacao; track $index) {
+    @for (itens of arrayAtuacao; track $index) {
     <div style="margin-left: 12%">
       <div class="modal-header">
         <h1 class="arapey-regular">
-          {{ item.title }}
+          {{ itens.title }}
         </h1>
       </div>
       <div class="modal-body">
-        <div class="row">
-          <ul class="col-4" style="padding-left: 3rem">
-            @for (opcao of item.opcao; track $index) {
-            <li class="list-office arimo-regular col" (click)="navigate('atuacao')">
-              <i class="bi bi-arrow-right"></i>
-              <b>
-                {{ opcao.label }}
-              </b>
-            </li>
-            }
-          </ul>
-          <ul class="col-4" style="padding-left: 3rem">
-            @for (opcao of item.opcao2; track $index) {
-            <li class="list-office arimo-regular col">
-              <i class="bi bi-arrow-right"></i>
-              <b>
-                {{ opcao.label }}
-              </b>
-            </li>
-            }
-          </ul>
-          <ul class="col-4" style="padding-left: 3rem">
-            @for (opcao of item.opcao3; track $index) {
-            <li class="list-office arimo-regular col">
-              <i class="bi bi-arrow-right"></i>
-              <b>
-                {{ opcao.label }}
-              </b>
-            </li>
-            }
-          </ul>
-        </div>
+        <ul class="row" style="padding-left: 3rem">
+          @for (item of atuacaoConteudo; track $index) {
+          <li
+            class="list-office arimo-regular col-4"
+            (click)="navigate('atuacao',item.id)"
+          >
+            <i class="bi bi-arrow-right"></i>
+            <b>
+              {{ item.nome }}
+            </b>
+          </li>
+          }
+        </ul>
       </div>
     </div>
     }

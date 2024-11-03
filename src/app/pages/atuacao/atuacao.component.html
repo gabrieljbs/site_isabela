@@ -10,14 +10,11 @@
         <i class="bi bi-arrow-90deg-up"></i>
         Indústria
       </button>
-      <h1 class="arapey-regular">Life sciences and Healthcare</h1>
+      <h1 class="arapey-regular">{{dados.nome}}</h1>
     </div>
     <div class="col-sm-5">
       <p class="arapey-regular">
-        Atuamos para os principais players das indústrias farmacêuticas,
-        farmoquímicas, de vacinas, biotecnologia, medtech, dispositivos médicos,
-        saúde do consumidor e serviços de prestação de assistência direta à
-        saúde
+        {{dados.texto1}}
       </p>
     </div>
   </div>
@@ -29,13 +26,7 @@
 <div class="about-us">
   <img src="assets/image_04.png" alt="" />
   <p class="arimo-regular">
-    Ao adotar continuamente tecnologia avançada, práticas sofisticadas de
-    sustentabilidade e trabalhar proativamente para melhorar o acesso dos
-    pacientes a produtos, serviços e soluções vitais,
-    <b>
-      esta indústria ocupa uma posição indiscutivelmente relevante na economia
-      global
-    </b>
+    {{dados.texto2}}
   </p>
 </div>
 
@@ -71,7 +62,9 @@
   </div>
 </div>
 
-<app-tabs-atuacao></app-tabs-atuacao>
+@if (oportunidade) {
+  <app-tabs-atuacao [desafios]="dados.desafios" [macroTendencias]="dados.macrotendencias" [oportunidades]="dados.oportunidade" [experiencias]="dados.experienciaEmDestaque"></app-tabs-atuacao>
+}
 
 <div class="pratica position-relative">
   <img
@@ -85,11 +78,7 @@
       <div class="col-5">
         <h1 class="arapey-regular">Áreas de Prática</h1>
         <p class="arapey-regular">
-          +10 profissionais do direito especializados na indústria
-        </p>
-        <p class="arapey-regular" style="border-top: solid #39e2b0 2px">
-          +10 profissionais técnico-científicos que suportam o dia-a-dia da
-          indústria
+        {{dados.textoAreaPratica}}
         </p>
       </div>
     </div>
@@ -100,28 +89,9 @@
     class="img-outside-right"
   />
 </div>
-<div class="info">
-  <div class="container">
-    <div class="info">
-      <p class="arimo-regular">
-        Ambiental | Contratos Administrativos e Licitações | Contratos
-        Comerciais | Contencioso e Arbitragem | EGVC | Financiamento de Projetos
-        Regulatório, Política e Compliance | Relações Governamentais |
-        Societário/M&A | Sustentabilidade | Trabalhista | Tributário
-      </p>
-    </div>
-  </div>
-</div>
 
-
-<div class="setores">
-  <div class="container">
-    <div class="tags">
-      @for (setor of areasDePraticaConteudo; track $index) {
-      <div class="tag arimo-regular">{{ setor }}</div>
-      }
-    </div>
-  </div>
-</div>
+@if (areasPraticas) {
+  <app-setores [areasPraticas]="dados.areasPraticas"></app-setores>
+}
 
 <app-find-an-advision></app-find-an-advision>
