@@ -51,8 +51,6 @@ export class SetoresComponent {
     const cleanedItems: any = items.map((item) =>
       item.replace(/{|}/g, '').replace(/\\/g, "'").replace(/"/g, '').trim()
     );
-
-    console.log(cleanedItems)
     return cleanedItems;
   }
 

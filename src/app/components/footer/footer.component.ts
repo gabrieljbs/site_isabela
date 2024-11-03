@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { AtuacaoService } from '../../services/atuacaoServices/atuacao-service.service';
 
 @Component({
   selector: 'app-footer',
@@ -10,28 +10,24 @@ import { Router } from '@angular/router';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  globalCoverage: any;
-  industries: any;
-  expertise: any;
-  constructor(
-    private router: Router,
-  ) {
+  atuacaoConteudo: any = [];
+  arrayAtuacao: any = [{ title: 'Atuação', conteudo: [] }];
+  constructor(private router: Router,private atuacaoService: AtuacaoService) {
+
+    
   }
 
-  navigate(path: string, page: string) {
-    switch (page) {
-      case 'Expertise':
-        this.router.navigate(['/expertise/', path]);
-        break;
-      case 'Industrie':
-        this.router.navigate(['/industrie', path]);
-        break;
-      case 'Global Coverage':
-        this.router.navigate(['/global-coverage/', path]);
-        break;
-      case '':
-        this.router.navigate(['/', path]);
-        break;
-    }
+  async ngOnInit(){
+    await (
+      await this.atuacaoService.list()
+    ).subscribe((res) => {
+      this.arrayAtuacao.conteudo = res as any;
+
+      this.atuacaoConteudo = this.arrayAtuacao.conteudo;
+    });
+  }
+
+  navigate(path: string, id: string) {
+    this.router.navigate(['/', path], { state: { id: id } });
   }
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -20,4 +21,11 @@ export class AtuacaoService {
     return this.http.get(`${this.apiUrl}/atuacao/${id}`);
   }
 
+  private idSource = new Subject<number>();
+  id$ = this.idSource.asObservable();
+
+  // Método para emitir o ID
+  setId(id: number) {
+    this.idSource.next(id);
+  }
 }
