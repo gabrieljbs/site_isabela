@@ -94,6 +94,7 @@ export class NavbarComponent {
       this.atuacaoConteudo = this.arrayAtuacao.conteudo;
     });
   }
+  
   navigate(path: string, id: any) {
     this.router.navigate(['/', path], { state: { id: id } }).then(() => {
     this.atuacaoService.setId(id);

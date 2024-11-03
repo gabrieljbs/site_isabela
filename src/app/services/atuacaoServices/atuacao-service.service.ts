@@ -3,21 +3,19 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Subject } from 'rxjs';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AtuacaoService {
+  private apiUrl =
+    'https://backend-costa-rodrigues-ohn5bz24a-gabriels-projects-368d0f0a.vercel.app/api';
+  constructor(private http: HttpClient) {}
 
-/*   private apiUrl = 'https://backend-costa-rodrigues-e3j0p51x8-gabriels-projects-368d0f0a.vercel.app/api' */
-  private apiUrl = 'http://localhost:3000/api'
-  constructor(private http: HttpClient) {
-  }
-
-  async list(){
+  async list() {
     const res = await this.http.get(`${this.apiUrl}/atuacao`);
-    return res
+    return res;
   }
 
- getById(id: number): Observable<any> {
+  getById(id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/atuacao/${id}`);
   }
 

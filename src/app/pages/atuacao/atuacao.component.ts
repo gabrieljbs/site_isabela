@@ -36,6 +36,7 @@ export class AtuacaoComponent {
   ) {
     let id = this.router.getCurrentNavigation()?.extras.state?.['id'];
     this.id = id;
+    this.chamar(this.id);
   }
 
   async ngOnInit() {
