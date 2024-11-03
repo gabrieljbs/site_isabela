@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { PessoalService } from '../../services/pessoalServices/pessoal-service.service';
-import { ReplacePipe } from "../../replace.pipe";
+import { ReplacePipe } from '../../replace.pipe';
 @Component({
   selector: 'app-people-detail',
   standalone: true,
@@ -65,20 +65,20 @@ export class PeopleDetailComponent {
         : [];
   }
 
-  
   aliacaEassociacao(texto: any) {
     const membro = texto.filter(
       (item: { nome: string }) => item.nome === 'Membro do(a)'
     );
 
     const areasDePratica = texto.filter(
-      (item: { nome: string }) => item.nome === "Diretora Executiva"
-
+      (item: { nome: string }) => item.nome === 'Diretora Executiva'
     );
 
     this.aliancas =
-    areasDePratica.length > 0
-        ? areasDePratica[0].conteudo.split(',').map((item: string) => item.trim())
+      areasDePratica.length > 0
+        ? areasDePratica[0].conteudo
+            .split(',')
+            .map((item: string) => item.trim())
         : [];
 
     this.membro =

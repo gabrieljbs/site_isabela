@@ -30,3 +30,31 @@
     margin-bottom: 5rem;
   }
 }
+
+a{
+  color: #505050;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+
+}
+.nav-tabs{
+  border: none;
+}
+.nav-link.active{
+  border: none;
+  box-shadow: none;
+  border-radius: none;
+  border-bottom: #39E2B0 solid 5px;
+  background: none;
+  color: #505050;
+}
+.nav-link:hover{
+  color: #505050;
+}
+
+
+.line{
+  border-bottom: #505050 solid 2px;
+  
+}

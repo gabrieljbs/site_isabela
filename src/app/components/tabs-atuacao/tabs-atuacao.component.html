@@ -1,5 +1,5 @@
 <div>
-  <div class="container"> 
+  <div class="container">
     <ul
       ngbNav
       #navTabs="ngbNav"
@@ -10,22 +10,13 @@
         <a class="arimo-regular" ngbNavLink>OPORTUNIDADES</a>
         <ng-template ngbNavContent>
           <div class="about-us">
-            <div class=" content container" >
+            <div class="content container">
               <div class="row">
-                <ul class="col">
-                  @for (item of oportunidades.slice(0,oportunidades.length/2 );
-                  track $index) {
+                <ul class="col-6">
+                  @for (item of
+                  oportunidadesArray.slice(0,oportunidades.length/2 ); track
+                  $index) {
                   <li class="arimo-regular">
-                    <i class="bi bi-arrow-right"></i>
-                    {{ item }}
-                  </li>
-                  }
-                </ul>
-  
-                <ul class="col">
-                  @for (item of oportunidades.slice(oportunidades.length/2 );
-                  track $index) {
-                  <li>
                     <i class="bi bi-arrow-right"></i>
                     {{ item }}
                   </li>
@@ -36,15 +27,47 @@
           </div>
         </ng-template>
       </li>
-  
+
       <li [ngbNavItem]="2">
         <a class="arimo-regular" ngbNavLink>DESAFIOS</a>
-        <ng-template ngbNavContent> </ng-template>
+        <ng-template ngbNavContent>
+          <div class="about-us">
+            <div class="content container">
+              <div class="row">
+                <ul class="col-6">
+                  @for (item of desafiosArray; track $index) {
+                  <li class="arimo-regular">
+                    <i class="bi bi-arrow-right"></i>
+                    {{ item }}
+                  </li>
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        </ng-template>
       </li>
-  
+
       <li [ngbNavItem]="3">
         <a class="arimo-regular" ngbNavLink>MACRO TENDÊNCIAS</a>
-        <ng-template ngbNavContent> </ng-template>
+        <ng-template ngbNavContent>
+          <div class="about-us">
+            <div class="content container">
+              <div class="row">
+                <ul class="col-6">
+                  @for (item of
+                  macroTendenciasArray.slice(0,oportunidades.length/2 ); track
+                  $index) {
+                  <li class="arimo-regular">
+                    <i class="bi bi-arrow-right"></i>
+                    {{ item }}
+                  </li>
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        </ng-template>
       </li>
     </ul>
   </div>
@@ -56,49 +79,20 @@
       <h3 class="arapey-regular">Experiência em Destaque</h3>
 
       <ul>
+        @for (item of experienciasArray; track $index) {
         <li>
-          <div class="conteudo arimo-regular" (click)="alternarConteudo()">
-            @if (!mostrarConteudo) {<i class="bi bi-chevron-down"></i>} @if
-            (mostrarConteudo) {<i class="bi bi-chevron-up"></i>} Novos
-            horizontes em pesquisas de terapia genética e oncológica no Brasil
+          <div class="conteudo arimo-regular" (click)="alternarConteudo($index)">
+            @if (!item.mostrar) {<i class="bi bi-chevron-down"></i>} @if
+            (item.mostrar) {<i class="bi bi-chevron-up"></i>} {{ item.nome }}
           </div>
 
-          @if (mostrarConteudo) {
+          @if (item.mostrar) {
           <p class="arimo-regular">
-            Desempenhamos um papel fundamental ao fornecer orientação
-            especializada para uma proeminente empresa biofarmacêutica dos
-            Estados Unidos, colaborando estreitamente na elaboração de
-            estratégias corporativas, no estabelecimento de parcerias
-            estratégicas e na garantia de conformidade regulatória nos
-            inovadores ensaios clínicos de terapia genética e oncológica
-            realizados no Brasil.
+            {{item.conteudo}}
           </p>
           }
         </li>
-        <li>
-          <div class="conteudo arimo-regular">
-            <i class="bi bi-chevron-down"></i>
-            Acesso ampliado a medicamentos para doenças raras
-          </div>
-        </li>
-        <li>
-          <div class="conteudo arimo-regular">
-            <i class="bi bi-chevron-down"></i>
-            Definindo políticas responsáveis de IA Generativa
-          </div>
-        </li>
-        <li>
-          <div class="conteudo arimo-regular">
-            <i class="bi bi-chevron-down"></i>
-            Guiando a implantação de soluções de saúde no Brasil
-          </div>
-        </li>
-        <li>
-          <div class="conteudo arimo-regular">
-            <i class="bi bi-chevron-down"></i>
-            Neutralidade de carbono em nome da saúde e do bem-estar
-          </div>
-        </li>
+        }
       </ul>
     </div>
   </div>

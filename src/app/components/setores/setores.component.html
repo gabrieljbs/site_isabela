@@ -1,0 +1,63 @@
+<div class="info">
+  <div class="container" style="border-bottom: solid 3px #39e2b0">
+    <div class="info">
+      <p class="arimo-regular">
+       <!--  @for (item of areasDePraticaConteudo; track $index) {
+          {{item.nome}} 
+        } -->
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="setores">
+  <div class="container">
+    <h1 class="arapey-regular">Setores transversais</h1>
+    <div class="tags">
+      @for (setor of areasDePraticaConteudo; track $index) {
+      <div class="tag arimo-regular">{{ setor }}</div>
+      }
+    </div>
+  </div>
+
+  <div class="lideres">
+    <div class="container">
+      <h1 class="arapey-regular">Conheça nossos líderes</h1>
+    </div>
+
+    <div class="container" style="border-bottom: #035151 solid 2px">
+      <swiper-container class="mySwiper" space-between="30" slides-per-view="4">
+        @for (item of pessoal; track $index) {
+        <swiper-slide>
+          <div class="cards">
+            <img [src]="item.foto" alt="" />
+
+            <div class="info">
+              <h1 class="arapey-regular">
+                {{ item.nome }}
+              </h1>
+              <h2 class="arimo-regular">
+                {{ item.cargo | replace : "," : " | " }}
+                <br />
+                {{ item.cidade }}
+              </h2>
+
+              <p class="arimo-regular">
+                {{ item.resumoMin }}
+              </p>
+            </div>
+          </div>
+        </swiper-slide>
+        }
+      </swiper-container>
+      <div class="botao">
+        <button class="left-slide" style="color: #505050" (click)="slideNext()">
+          <i class="bi bi-arrow-left"></i>
+        </button>
+        <button class="right-slide" style="color: #035151" (click)="slidePrev()">
+          <i class="bi bi-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
