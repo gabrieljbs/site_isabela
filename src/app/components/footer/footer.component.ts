@@ -27,7 +27,8 @@ export class FooterComponent {
     });
   }
 
-  navigate(path: string, id: string) {
+  navigate(path: string, id: any) {
     this.router.navigate(['/', path], { state: { id: id } });
+    this.atuacaoService.setId(id);
   }
 }
